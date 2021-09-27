@@ -1,0 +1,29 @@
+<div class="main">
+  <div
+    class="black_frame"
+    *ngIf="opacity != 0 && opacity != 1"
+    [@outStayAnimation]
+    [ngStyle]="{ opacity: opacity }"
+  ></div>
+  <div class="blue_bg" [@inOutAnimation] *ngIf="opacity == 1"></div>
+  <div class="content" [ngClass]="{ 'on--top': opacity == 0 }">
+    <h2>We Create An Appliaction That Will Help You Understand Your Woman</h2>
+    <button class="blue_btn" (click)="onClicked()">Watch Video</button>
+    <div class="shop_container">
+      <img
+        src="assets/main_page/app_store.png"
+        alt="app store"
+        class="shop_btn"
+      />
+      <img
+        src="assets/main_page/android.png"
+        alt="google play"
+        class="shop_btn"
+      />
+    </div>
+    <app-scroll-down></app-scroll-down>
+  </div>
+  <div class="phone">
+    <img src="assets/main_page/phone.png" alt="" />
+  </div>
+</div>

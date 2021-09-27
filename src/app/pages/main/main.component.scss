@@ -1,0 +1,65 @@
+@media (min-width: 320px) {
+} // for general stylings (both, mobile && desktop)
+@media (max-width: 767px) {
+  .main {
+    overflow-x: hidden;
+  }
+  .content {
+    z-index: -3;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url(../../../assets/main_page/background.png);
+    background-size: cover;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .blue_btn {
+    align-self: center;
+    margin-top: 64.5px;
+    margin-bottom: 57px;
+  }
+  .shop_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 41.5px;
+  }
+  .phone {
+    z-index: 100;
+    width: 100vw;
+    height: 95vh;
+    margin-top: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .on--top {
+    z-index: 50;
+  }
+  .black_frame {
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgb(20, 32, 39);
+  }
+  .blue_bg {
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-image: url(../../../assets/main_page/after_scroll_bg.png);
+  }
+  .phone img {
+    margin: 0 auto;
+  }
+} // for only styles between 320px and 768px (most mobile devies)
+@media (min-width: 768px) {
+} // general desktop && tablet styles if needed
+@media (min-width: 768px) and (max-width: 1024px) {
+} // only tablet styles
+@media (min-width: 1025px) {
+}
