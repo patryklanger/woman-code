@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
 import { ScrollDownComponent } from './elements/scroll-down/scroll-down.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuComponent } from './elements/menu/menu.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, ScrollDownComponent],
+  declarations: [AppComponent, MainComponent, ScrollDownComponent, MenuComponent],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

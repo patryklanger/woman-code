@@ -4,6 +4,9 @@
   .main {
     overflow-x: hidden;
   }
+  h2 {
+    font-weight: 600;
+  }
   .content {
     z-index: -3;
     width: 100vw;
@@ -31,9 +34,10 @@
   .phone {
     z-index: 100;
     width: 100vw;
-    height: 95vh;
+    height: 100vh;
     margin-top: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
   }
   .on--top {
@@ -53,8 +57,20 @@
     position: fixed;
     background-image: url(../../../assets/main_page/after_scroll_bg.png);
   }
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
   .phone img {
+    height: 80%;
     margin: 0 auto;
+  }
+  .woman-logo {
+    margin-top: 97px;
+    margin-bottom: 53px;
+    width: 264px;
+    align-self: center;
   }
 } // for only styles between 320px and 768px (most mobile devies)
 @media (min-width: 768px) {

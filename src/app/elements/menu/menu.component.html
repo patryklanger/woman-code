@@ -1,0 +1,29 @@
+<div class="menu_logo" *ngIf="!opened" (click)="toggleMenuClick()">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</div>
+<div class="menu_container" *ngIf="opened">
+  <div class="header">
+    <img src="" alt="logo" />
+    <div>
+      <span>Hide</span>
+      <img src="back" alt="" />
+    </div>
+  </div>
+  <div class="greetings">
+    <p>Hello <span>My Man</span></p>
+  </div>
+  <div class="menu">
+    <ul>
+      <li><p>Function</p></li>
+      <li><p>Hormon's</p></li>
+      <li><p>Calendar</p></li>
+      <li><p>Follicle icon</p></li>
+      <li><p>About App</p></li>
+      <li><p>How it's Work</p></li>
+      <li><p>Medical verification</p></li>
+      <li><p>Opinion</p></li>
+    </ul>
+  </div>
+</div>
