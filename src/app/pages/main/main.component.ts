@@ -7,6 +7,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -42,7 +43,7 @@ export class MainComponent implements OnInit {
     console.log(this.opacity);
   }
   opacity = 0;
-  constructor(private winRef: WindowRefService) {}
+  constructor(private winRef: WindowRefService, private router: Router) {}
   onClicked() {
     alert('XD');
   }
@@ -51,6 +52,9 @@ export class MainComponent implements OnInit {
   }
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
+  }
+  onImageClicked() {
+    this.router.navigateByUrl('our-app');
   }
 
   ngOnInit(): void {}

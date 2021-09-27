@@ -1,6 +1,11 @@
 <app-menu class="menu"></app-menu>
 <div class="main">
-  <div class="blue_bg" [@inOutAnimation] *ngIf="opacity == 1"></div>
+  <div
+    class="blue_bg"
+    (click)="scrollToStart()"
+    [@inOutAnimation]
+    *ngIf="opacity == 1"
+  ></div>
   <div class="content" [ngClass]="{ 'on--top': opacity == 0 }">
     <img src="assets/main_page/woman-code.png" alt="logo" class="woman-logo" />
 
@@ -28,6 +33,6 @@
       [ngStyle]="{ opacity: opacity }"
       (click)="scrollToStart()"
     ></div>
-    <img src="assets/main_page/phone.png" alt="" />
+    <img src="assets/main_page/phone.png" alt="app" (click)=onImageClicked() />
   </div>
 </div>

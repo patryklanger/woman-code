@@ -1,0 +1,16 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 28px;
+  background: rgb(26, 28, 29);
+  padding-bottom: 18px;
+  box-shadow: 4px 0px 7px #0000008f;
+}
+.header img {
+  margin-top: 18px;
+}
