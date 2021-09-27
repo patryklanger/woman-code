@@ -1,29 +1,39 @@
-<div class="menu_logo" *ngIf="!opened" (click)="toggleMenuClick()">
+<div
+  class="menu_logo"
+  [@holdUntilAnimate]
+  *ngIf="!opened"
+  (click)="toggleMenuClick()"
+>
   <div class="line"></div>
   <div class="line"></div>
   <div class="line"></div>
 </div>
-<div class="menu_container" *ngIf="opened">
+<div class="menu_container" [@inOutAnimation] *ngIf="opened">
   <div class="header">
-    <img src="" alt="logo" />
-    <div>
-      <span>Hide</span>
-      <img src="back" alt="" />
+    <img src="assets/menu/menu-logo.png" alt="logo" />
+    <div class="back_button" (click)="toggleMenuClick()">
+      <p class="hide--text"><span>Hide</span></p>
+      <img src="assets/menu/arrow-left.png" alt="back" />
     </div>
   </div>
-  <div class="greetings">
-    <p>Hello <span>My Man</span></p>
-  </div>
-  <div class="menu">
-    <ul>
-      <li><p>Function</p></li>
-      <li><p>Hormon's</p></li>
-      <li><p>Calendar</p></li>
-      <li><p>Follicle icon</p></li>
-      <li><p>About App</p></li>
-      <li><p>How it's Work</p></li>
-      <li><p>Medical verification</p></li>
-      <li><p>Opinion</p></li>
-    </ul>
+  <div class="grid">
+    <div class="greetings greet1">
+      <p>Hello&nbsp;&nbsp;</p>
+    </div>
+    <div class="greetings greet2">
+      <p><span>My Man</span></p>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><p>Function</p></li>
+        <li><p>Hormon's</p></li>
+        <li><p>Calendar</p></li>
+        <li><p>Follicle icon</p></li>
+        <li><p>About App</p></li>
+        <li><p>How it's Work</p></li>
+        <li><p>Medical verification</p></li>
+        <li><p>Opinion</p></li>
+      </ul>
+    </div>
   </div>
 </div>

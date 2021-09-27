@@ -1,3 +1,4 @@
+<app-menu class="menu"></app-menu>
 <div class="main">
   <div
     class="black_frame"
@@ -7,8 +8,6 @@
   ></div>
   <div class="blue_bg" [@inOutAnimation] *ngIf="opacity == 1"></div>
   <div class="content" [ngClass]="{ 'on--top': opacity == 0 }">
-    <app-menu class="menu"></app-menu>
-
     <img src="assets/main_page/woman-code.png" alt="logo" class="woman-logo" />
 
     <h2>We Create An Appliaction That Will Help You Understand Your Woman</h2>

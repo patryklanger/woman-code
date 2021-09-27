@@ -21,6 +21,7 @@
     flex-direction: column;
   }
   .blue_btn {
+    z-index: -1;
     align-self: center;
     margin-top: 64.5px;
     margin-bottom: 57px;
@@ -61,6 +62,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
   }
   .phone img {
     height: 80%;

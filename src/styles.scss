@@ -128,6 +128,11 @@ h2 {
   text-transform: capitalize;
   opacity: 1;
 }
+p {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
+    20px / var(--unnamed-line-spacing-25) var(--unnamed-font-family-nunito);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
 .blue_btn {
   position: relative;
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
