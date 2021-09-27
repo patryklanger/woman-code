@@ -1,114 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,600;1,600&display=swap");
-:root {
-  /* Colors: */
-  --unnamed-color-616d81: #616d81;
-  --unnamed-color-606671: #606671;
-  --unnamed-color-1c212a: #1c212a;
-  --unnamed-color-929db1: #929db1;
-  --unnamed-color-ffd012: #ffd012;
-  --unnamed-color-3aa7b0: #3aa7b0;
-  --unnamed-color-cb6a2d: #cb6a2d;
-  --unnamed-color-94b700: #94b700;
-  --unnamed-color-c0d2eb: #c0d2eb;
-  --unnamed-color-ffffff: #ffffff;
-  --unnamed-color-b7bdc8: #b7bdc8;
-
-  /* Font/text values */
-  --unnamed-font-family-nunito: Nunito;
-  --unnamed-font-style-normal: normal;
-  --unnamed-font-weight-300: 300px;
-  --unnamed-font-weight-600: 600px;
-  --unnamed-font-size-16: 16px;
-  --unnamed-font-size-18: 18px;
-  --unnamed-font-size-25: 25px;
-  --unnamed-font-size-35: 35px;
-  --unnamed-font-size-50: 50px;
-  --unnamed-font-size-58: 58px;
-  --unnamed-font-size-70: 70px;
-  --unnamed-character-spacing-0: 0px;
-  --unnamed-line-spacing-22: 22px;
-  --unnamed-line-spacing-25: 25px;
-  --unnamed-line-spacing-32: 32px;
-  --unnamed-line-spacing-49: 49px;
-  --unnamed-line-spacing-80: 80px;
-  --unnamed-text-transform-titlecase: titlecase;
-}
-
-/* Character Styles */
-.unnamed-character-style-1 {
-  font-family: var(--unnamed-font-family-nunito);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-18);
-  line-height: var(--unnamed-line-spacing-25);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-929db1);
-}
-.unnamed-character-style-2 {
-  font-family: var(--unnamed-font-family-nunito);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-35);
-  line-height: var(--unnamed-line-spacing-49);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-b7bdc8);
-}
-.unnamed-character-style-3 {
-  font-family: var(--unnamed-font-family-nunito);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-70);
-  line-height: var(--unnamed-line-spacing-80);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-ffd012);
-}
-.unnamed-character-style-4 {
-  font-family: var(--unnamed-font-family-nunito);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-25);
-  line-height: var(--unnamed-line-spacing-32);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-929db1);
-}
-.unnamed-character-style-5 {
-  font-family: var(--unnamed-font-family-nunito);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-58);
-  line-height: var(--unnamed-line-spacing-49);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-b7bdc8);
-}
-.unnamed-character-style-6 {
-  font-family: var(--unnamed-font-family-nunito);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-58);
-  line-height: var(--unnamed-line-spacing-49);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-ffd012);
-}
-.unnamed-character-style-7 {
-  font-family: var(--unnamed-font-family-nunito);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-50);
-  line-height: var(--unnamed-line-spacing-49);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-ffffff);
-}
-.unnamed-character-style-8 {
-  font-family: var(--unnamed-font-family-nunito);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-300);
-  font-size: var(--unnamed-font-size-16);
-  line-height: var(--unnamed-line-spacing-22);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-c0d2eb);
-  text-transform: var(--unnamed-text-transform-titlecase);
-}
 
 * {
   padding: 0;
@@ -133,16 +24,13 @@ h2 {
   text-align: center;
 }
 p {
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
-    20px / var(--unnamed-line-spacing-25) var(--unnamed-font-family-nunito);
-  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: left;
+  font: normal normal 600 20px/25px Nunito;
+  letter-spacing: 0px;
+  color: #929db1;
 }
 .blue_btn {
   position: relative;
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
-    var(--unnamed-font-size-16) / 26px var(--unnamed-font-family-nunito);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-ffffff);
   text-align: left;
   font: normal normal 600 16px/26px Nunito;
   letter-spacing: 0px;
