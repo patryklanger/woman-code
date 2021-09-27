@@ -46,6 +46,12 @@ export class MainComponent implements OnInit {
   onClicked() {
     alert('XD');
   }
+  scrollToStart(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
 
   ngOnInit(): void {}
 }
