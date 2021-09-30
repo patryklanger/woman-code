@@ -74,6 +74,12 @@ export class PresentationPageComponent implements OnInit {
       color: '#AC9800',
     },
   ];
+  calendar = {
+    title: 'Calendar',
+    content:
+      'Dzięki tej funkcji mozez zobaczyć w jakim dniu cyklu będzie Twoja kobieta i to na 3 miesiące do przodu. Dowiesz się jak wtedy zachować się do danej sytuacji hormonalnej. Dzięki temu moesz zaplanować sobie urlop czy inne plany z kobietą. Aplikacja będzie dostarczać Tobie',
+    img: '',
+  };
   constructor() {}
 
   ngOnInit(): void {}

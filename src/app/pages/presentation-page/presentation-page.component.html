@@ -3,9 +3,20 @@
   <h1>We present something that was<br />not there</h1>
   <img src="" alt="our app" class="next_sec" />
   <h1 class="yellow">What is<br />the most important</h1>
-  <app-right-swipe [modes]="modes"></app-right-swipe>
+  <app-right-swipe [modes]="modes" [type]="SliderType.modes"></app-right-swipe>
   <app-right-swipe
     [modes]="hormons"
     [type]="SliderType.hormons"
   ></app-right-swipe>
+  <div class="">
+    <h1 style="color: #ffd012">What else?</h1>
+    <p style="text-align: center; margin-top: 30px">
+      Woman Code wskaze Ci np.: <br />
+      ze za 3 miesiace np.<br />
+      21.07.2021 jego kobieta<br />
+      będzie miała dni niepłodne<br />
+      lub miesiączkę<br />
+    </p>
+  </div>
+  <app-par-title [mode]="calendar" [type]="SliderType.calendar"></app-par-title>
 </div>

@@ -1,17 +1,34 @@
 <div class="container">
-  <img src="assets/ui/par-title/bg.png" alt="" class="bg" />
-  <h1
-    [ngStyle]="{ color: mode.color }"
-    [ngClass]="{ noRight: mode.textAlign == 'center' }"
+  <img
+    src="assets/ui/par-title/bg.png"
+    alt=""
+    class="bg"
+    *ngIf="type == SliderType.modes"
+  />
+  <img
+    src="assets/ui/par-title/bg2.png"
+    alt=""
+    class="bg"
+    *ngIf="type == SliderType.calendar"
+  />
+  <div
+    class="content"
+    [ngClass]="{ calendarContent: type == SliderType.calendar }"
   >
-    {{ mode.title }}
-  </h1>
-  <p>
-    {{ mode.content }}
-  </p>
-  <div class="btn" (click)="onNextClicked()">
-    <span class="text">Swipe</span>
-    <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+    <h1 [ngStyle]="{ color: mode.color }">
+      {{ mode.title }}
+    </h1>
+    <p>
+      {{ mode.content }}
+    </p>
+    <div
+      class="btn"
+      (click)="onNextClicked()"
+      *ngIf="!last && !SliderType.calendar"
+    >
+      <span class="text">Swipe</span>
+      <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+    </div>
   </div>
 </div>
 <div class="photo"><img src="{{ mode.img }}" alt="mode" /></div>

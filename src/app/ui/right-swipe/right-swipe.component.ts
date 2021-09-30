@@ -11,6 +11,7 @@ import {
 export enum SliderType {
   modes = 1,
   hormons = 2,
+  calendar = 3,
 }
 
 @Component({
