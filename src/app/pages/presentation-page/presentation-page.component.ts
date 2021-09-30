@@ -37,6 +37,13 @@ export class PresentationPageComponent implements OnInit {
       img: 'assets/presentation/modes/1.png',
       color: '#6B7FE8',
     },
+    {
+      title: 'Menstruation',
+      content:
+        'W tym okresie lepiej nie poruszać tematów trudnych z swoją kobietą. Twoja partnerka z racji rozpoczęcia się krawienia może być zmęczona, czuć się ociężała i nieatrakcyjna. Twoje wsparcie w tym czasie będzie nieocenione.',
+      img: '',
+      color: '#C64F90',
+    },
   ];
   hormons = [
     {
