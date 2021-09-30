@@ -1,12 +1,17 @@
 <div class="container">
   <img src="assets/ui/par-title/bg.png" alt="" class="bg" />
-  <h1>Tryby</h1>
+  <h1
+    [ngStyle]="{ color: mode.color }"
+    [ngClass]="{ noRight: mode.textAlign == 'center' }"
+  >
+    {{ mode.title }}
+  </h1>
   <p>
-    Aplikacja podpowie Ci kiedy bezpiecznie umówić się z kolegami na piwo czy
-    ryby, a kiedy bezpieczniej zostać w domu
+    {{ mode.content }}
   </p>
-  <div class="btn">
+  <div class="btn" (click)="onNextClicked()">
     <span class="text">Swipe</span>
     <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
   </div>
 </div>
+<div class="photo"><img src="{{ mode.img }}" alt="mode" /></div>

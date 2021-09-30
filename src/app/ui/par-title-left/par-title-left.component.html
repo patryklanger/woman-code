@@ -1,0 +1,16 @@
+<div class="container">
+  <img src="assets/ui/par-title/bg1.png" alt="" class="bg" />
+  <div class="content">
+    <h1 [ngStyle]="{ 'text-align': mode.textAlign, color: mode.color }">
+      {{ mode.title }}
+    </h1>
+    <p>
+      {{ mode.content }}
+    </p>
+    <div class="btn" (click)="onNextClicked()">
+      <span class="text">Swipe</span>
+      <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+    </div>
+  </div>
+</div>
+<div class="photo"><img src="{{ mode.img }}" alt="mode" /></div>

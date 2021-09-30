@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-par-title',
-  templateUrl: './par-title.component.html',
-  styleUrls: ['./par-title.component.scss'],
+  selector: 'app-par-title-left',
+  templateUrl: './par-title-left.component.html',
+  styleUrls: ['./par-title-left.component.scss'],
 })
-export class ParTitleComponent implements OnInit {
+export class ParTitleLeftComponent implements OnInit {
   @Input() mode: {
     title: string;
     content: string;
@@ -27,12 +27,13 @@ export class ParTitleComponent implements OnInit {
 
     if (this.mode.color == undefined) this.mode.color = '#B7BDC8';
 
-    this.mode.textAlign == 'center'
-      ? (this.textAlign = 'center')
+    this.centered
+      ? (this.mode.textAlign = 'center')
       : (this.textAlign = 'right');
   }
   onNextClicked() {
     this.nextClicked.emit();
   }
+
   ngOnInit(): void {}
 }

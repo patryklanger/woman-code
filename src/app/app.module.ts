@@ -10,9 +10,11 @@ import { MenuComponent } from './elements/menu/menu.component';
 import { StickyHeaderComponent } from './elements/sticky-header/sticky-header.component';
 import { PresentationPageComponent } from './pages/presentation-page/presentation-page.component';
 import { ParTitleComponent } from './ui/par-title/par-title.component';
+import { RightSwipeComponent } from './ui/right-swipe/right-swipe.component';
+import { ParTitleLeftComponent } from './ui/par-title-left/par-title-left.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, ScrollDownComponent, MenuComponent, StickyHeaderComponent, PresentationPageComponent, ParTitleComponent],
+  declarations: [AppComponent, MainComponent, ScrollDownComponent, MenuComponent, StickyHeaderComponent, PresentationPageComponent, ParTitleComponent, RightSwipeComponent, ParTitleLeftComponent],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
