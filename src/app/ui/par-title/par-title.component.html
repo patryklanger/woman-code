@@ -19,7 +19,10 @@
   />
   <div
     class="content"
-    [ngClass]="{ calendarContent: type == SliderType.calendar }"
+    [ngClass]="{
+      calendarContent: type == SliderType.calendar,
+      aboutAppContent: type == SliderType.aboutApp
+    }"
   >
     <h1 [ngStyle]="{ color: mode.color }">
       {{ mode.title }}
@@ -44,4 +47,6 @@
     >
   </div>
 </div>
-<div class="photo"><img src="{{ mode.img }}" alt="mode" /></div>
+<div class="photo" *ngIf="!(type == SliderType.aboutApp)">
+  <img src="{{ mode.img }}" alt="mode" />
+</div>

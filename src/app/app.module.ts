@@ -13,6 +13,11 @@ import { ParTitleComponent } from './ui/par-title/par-title.component';
 import { RightSwipeComponent } from './ui/right-swipe/right-swipe.component';
 import { ParTitleLeftComponent } from './ui/par-title-left/par-title-left.component';
 import { YellowBtnComponent } from './ui/elements/buttons/yellow-btn/yellow-btn.component';
+import { StoresComponent } from './ui/elements/stores/stores.component';
+import { DoctorComponent } from './elements/doctor/doctor.component';
+import { DividerComponent } from './ui/elements/divider/divider.component';
+import { YelBorderBtnComponent } from './ui/elements/buttons/yel-border-btn/yel-border-btn.component';
+import { VerticalDividerComponent } from './ui/elements/vertical-divider/vertical-divider.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,11 @@ import { YellowBtnComponent } from './ui/elements/buttons/yellow-btn/yellow-btn.
     RightSwipeComponent,
     ParTitleLeftComponent,
     YellowBtnComponent,
+    StoresComponent,
+    DoctorComponent,
+    DividerComponent,
+    YelBorderBtnComponent,
+    VerticalDividerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

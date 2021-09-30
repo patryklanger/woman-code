@@ -11,18 +11,7 @@
 
     <h2>We Create An Appliaction That Will Help You Understand Your Woman</h2>
     <button class="blue_btn" (click)="onClicked()">Watch Video</button>
-    <div class="shop_container">
-      <img
-        src="assets/main_page/app_store.png"
-        alt="app store"
-        class="shop_btn"
-      />
-      <img
-        src="assets/main_page/android.png"
-        alt="google play"
-        class="shop_btn"
-      />
-    </div>
+    <app-stores></app-stores>
     <app-scroll-down (btnClicked)="scroll(target)"></app-scroll-down>
   </div>
   <div class="phone" #target>
@@ -33,6 +22,10 @@
       [ngStyle]="{ opacity: opacity }"
       (click)="scrollToStart()"
     ></div>
-    <img src="assets/main_page/phone.png" alt="app" (click)=onImageClicked() />
+    <img
+      src="assets/main_page/phone.png"
+      alt="app"
+      (click)="onImageClicked()"
+    />
   </div>
 </div>

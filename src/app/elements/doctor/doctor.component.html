@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="photo">
+    <img src="assets/presentation/doctors/shadow.png" alt="" class="shadow" />
+    <img src="assets/presentation/doctors/border.png" alt="" class="border" />
+    <img src="{{ doctor.img }}" alt="" class="doctor" />
+    <img
+      src="assets/presentation/doctors/stethoscope.png"
+      alt=""
+      class="stethoscope"
+    />
+  </div>
+  <p class="description">
+    {{ doctor.description }}
+  </p>
+  <p class="name">{{ doctor.name }}</p>
+  <app-yellow-btn>Read more</app-yellow-btn>
+</div>
+<app-divider *ngIf="!last"></app-divider>

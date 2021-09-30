@@ -93,6 +93,15 @@ export class PresentationPageComponent implements OnInit {
     img: '',
     color: '#FFD012',
   };
+  doctors = [
+    {
+      img: 'assets/presentation/doctors/doctor1.png',
+      description:
+        'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Maecenas Bibendum Porttitor Nunc, Ac Pretium Elit Fringilla Consequat. Vestibulum Ultricies Dui Et Urna Tincidunt, Sed Tempor Dolor Pulvinar.',
+      name: 'Dr John Snow',
+      link: '',
+    },
+  ];
   constructor() {}
 
   ngOnInit(): void {}
