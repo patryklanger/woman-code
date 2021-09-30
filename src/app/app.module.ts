@@ -12,9 +12,21 @@ import { PresentationPageComponent } from './pages/presentation-page/presentatio
 import { ParTitleComponent } from './ui/par-title/par-title.component';
 import { RightSwipeComponent } from './ui/right-swipe/right-swipe.component';
 import { ParTitleLeftComponent } from './ui/par-title-left/par-title-left.component';
+import { YellowBtnComponent } from './ui/elements/buttons/yellow-btn/yellow-btn.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, ScrollDownComponent, MenuComponent, StickyHeaderComponent, PresentationPageComponent, ParTitleComponent, RightSwipeComponent, ParTitleLeftComponent],
+  declarations: [
+    AppComponent,
+    MainComponent,
+    ScrollDownComponent,
+    MenuComponent,
+    StickyHeaderComponent,
+    PresentationPageComponent,
+    ParTitleComponent,
+    RightSwipeComponent,
+    ParTitleLeftComponent,
+    YellowBtnComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

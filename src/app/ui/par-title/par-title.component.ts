@@ -24,6 +24,7 @@ export class ParTitleComponent implements OnInit {
   @Input() last = false;
   @Output() nextClicked = new EventEmitter();
   constructor() {
+    console.log(this.last);
     this.mode = {
       title: '',
       content: '',

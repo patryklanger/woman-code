@@ -5,6 +5,7 @@
     (nextClicked)="nextMode()"
     *ngIf="currentSlide == i"
     style="display: block"
+    [last]="currentSlide === modes.length - 1"
   ></app-par-title>
 </ng-template>
 <ng-template ngFor let-mode [ngForOf]="modes" let-i="index" *ngIf="type == 2">
@@ -14,5 +15,6 @@
     (nextClicked)="nextMode()"
     *ngIf="currentSlide == i"
     style="display: block"
+    [last]="currentSlide === modes.length - 1"
   ></app-par-title-left>
 </ng-template>

@@ -11,6 +11,12 @@
     class="bg"
     *ngIf="type == SliderType.calendar"
   />
+  <img
+    src="assets/ui/par-title/bg4.png"
+    alt=""
+    class="bg4"
+    *ngIf="type == SliderType.aboutApp"
+  />
   <div
     class="content"
     [ngClass]="{ calendarContent: type == SliderType.calendar }"
@@ -24,11 +30,18 @@
     <div
       class="btn"
       (click)="onNextClicked()"
-      *ngIf="!last && !SliderType.calendar"
+      *ngIf="
+        !last &&
+        !(type == SliderType.calendar) &&
+        !(type == SliderType.aboutApp)
+      "
     >
       <span class="text">Swipe</span>
       <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
     </div>
+    <app-yellow-btn *ngIf="type == SliderType.aboutApp"
+      >Show me more</app-yellow-btn
+    >
   </div>
 </div>
 <div class="photo"><img src="{{ mode.img }}" alt="mode" /></div>

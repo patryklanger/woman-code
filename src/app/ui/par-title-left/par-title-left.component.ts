@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SliderType } from 'src/app/ui/right-swipe/right-swipe.component';
 
 @Component({
   selector: 'app-par-title-left',
@@ -13,10 +14,11 @@ export class ParTitleLeftComponent implements OnInit {
     color?: string;
     textAlign?: string;
   };
-
+  SliderType = SliderType;
+  @Input() type = SliderType.hormons;
   centered = false;
   textAlign = 'right';
-
+  @Input() last = false;
   @Output() nextClicked = new EventEmitter();
   constructor() {
     this.mode = {

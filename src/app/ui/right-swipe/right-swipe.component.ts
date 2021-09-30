@@ -12,6 +12,8 @@ export enum SliderType {
   modes = 1,
   hormons = 2,
   calendar = 3,
+  follicleIcon = 4,
+  aboutApp = 5,
 }
 
 @Component({

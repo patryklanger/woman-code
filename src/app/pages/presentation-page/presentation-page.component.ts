@@ -80,6 +80,19 @@ export class PresentationPageComponent implements OnInit {
       'Dzięki tej funkcji mozez zobaczyć w jakim dniu cyklu będzie Twoja kobieta i to na 3 miesiące do przodu. Dowiesz się jak wtedy zachować się do danej sytuacji hormonalnej. Dzięki temu moesz zaplanować sobie urlop czy inne plany z kobietą. Aplikacja będzie dostarczać Tobie',
     img: '',
   };
+  follicleIcon = {
+    title: 'Follicle icon',
+    content:
+      'Mniej więcej w połowie cyklu miesiaczkowego, pod wypływem hormonu luteinizującego, następnie pod wpływem hormonów uwolni komórkę jajową, która przez 12 godzin będzie gotowa do zapłodnienia. Tu znowu natura jest górą i my faceci musimy się do tego dostosować ;) 13 dzień jest dniem, kiedy pęcherzyk średnio pęka ;)',
+    img: '',
+  };
+  aboutApp = {
+    title: 'About App',
+    content:
+      'WOMAN CODE ma za zadanie, zeby naze kobiety byla dla nas bardziej przewidywalne i mile!!! Aplikacja dla mezczyzn, ktorzy staraja sie o dziecko. Jak wiadomo, zeby nasze plemniki mogly sie polaczyc z komorka naszej kobiety musza byc silne i wypoczte i byc w odpowiednim czasie i lokalizacji',
+    img: '',
+    color: '#FFD012',
+  };
   constructor() {}
 
   ngOnInit(): void {}
