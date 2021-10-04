@@ -8,6 +8,7 @@
     [modes]="hormons"
     [type]="SliderType.hormons"
   ></app-right-swipe>
+  <app-photo-bg></app-photo-bg>
   <div class="">
     <h1 style="color: #ffd012">What else?</h1>
     <p style="text-align: center; margin-top: 30px">
@@ -18,12 +19,23 @@
       lub miesiączkę<br />
     </p>
   </div>
-  <app-par-title [mode]="calendar" [type]="SliderType.calendar"></app-par-title>
+
+  <app-right-swipe [modes]="calendar" [type]="SliderType.calendar">
+  </app-right-swipe>
+
   <app-par-title-left
-    [mode]="follicleIcon"
+    [modes]="follicleIcon"
     [type]="SliderType.follicleIcon"
   ></app-par-title-left>
-  <app-par-title [mode]="aboutApp" [type]="SliderType.aboutApp"></app-par-title>
+
+  <!-- <app-par-title
+    [modes]="aboutApp"
+    [type]="SliderType.aboutApp"
+  ></app-par-title> -->
+  <app-right-swipe
+    [modes]="aboutApp"
+    [type]="SliderType.aboutApp"
+  ></app-right-swipe>
   <div class="howItWorkParagraph">
     <h1>How<br />it Works</h1>
     <p>
@@ -54,17 +66,18 @@
   <h1>Let's start earning</h1>
   <app-vertical-divider></app-vertical-divider>
   <div class="questions">
-  <h1 style="color: #ffd012">How?</h1>
-  <app-yellow-btn>Show me more</app-yellow-btn>
-  <app-vertical-divider></app-vertical-divider>
+    <h1 style="color: #ffd012">How?</h1>
+    <app-yellow-btn>Show me more</app-yellow-btn>
+    <app-vertical-divider></app-vertical-divider>
   </div>
   <div class="questions">
-  <h1 style="color: #ffd012">Who?</h1>
-  <app-yellow-btn>Show me more</app-yellow-btn>
-  <app-vertical-divider></app-vertical-divider>
+    <h1 style="color: #ffd012">Who?</h1>
+    <app-yellow-btn>Show me more</app-yellow-btn>
+    <app-vertical-divider></app-vertical-divider>
   </div>
   <div class="questions">
-  <h1 style="color: #ffd012">How much?</h1>
-  <app-yellow-btn>Show me more</app-yellow-btn>
+    <h1 style="color: #ffd012">How much?</h1>
+    <app-yellow-btn>Show me more</app-yellow-btn>
   </div>
+  <app-business-partners [partners]="partners"></app-business-partners>
 </div>

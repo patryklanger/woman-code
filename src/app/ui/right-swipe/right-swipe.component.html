@@ -1,20 +1,19 @@
-<ng-template ngFor let-mode [ngForOf]="modes" let-i="index" *ngIf="type == 1">
-  <app-par-title
-    [@inOutAnimation]
-    [mode]="modes[currentSlide]"
-    (nextClicked)="nextMode()"
-    *ngIf="currentSlide == i"
-    style="display: block"
-    [last]="currentSlide === modes.length - 1"
-  ></app-par-title>
-</ng-template>
-<ng-template ngFor let-mode [ngForOf]="modes" let-i="index" *ngIf="type == 2">
-  <app-par-title-left
-    [@inOutAnimation]
-    [mode]="modes[currentSlide]"
-    (nextClicked)="nextMode()"
-    *ngIf="currentSlide == i"
-    style="display: block"
-    [last]="currentSlide === modes.length - 1"
-  ></app-par-title-left>
-</ng-template>
+<app-par-title
+  [modes]="modes"
+  (nextClicked)="nextMode()"
+  *ngIf="type == 1 || type == 3 || type == 5"
+  style="display: block"
+  [currentSlide]="currentSlide"
+  [type]="type"
+></app-par-title>
+<app-par-title-left
+  *ngIf="type == 2"
+  [modes]="modes"
+  (nextClicked)="nextMode()"
+  [currentSlide]="currentSlide"
+  style="display: block"
+></app-par-title-left>
+<app-screen-gallery
+  [imgs]="imgs"
+  [currentSlide]="currentSlide"
+></app-screen-gallery>

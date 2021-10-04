@@ -1,0 +1,26 @@
+<div class="container">
+  <img src="assets/business-partners/bg.png" alt="" class="bg" />
+  <h1 class="title">Business<br />partners</h1>
+
+  <ng-template ngFor let-partner [ngForOf]="partners" let-i="index">
+    <img
+      src="{{ partner.img }}"
+      alt=""
+      class="photo"
+      *ngIf="currentSlide == i"
+      [@leftSwipe]
+    />
+
+    <p class="description" *ngIf="currentSlide == i" [@rightSwipe]>
+      {{ partner.description }}
+    </p>
+  </ng-template>
+  <div
+    class="next_btn"
+    (click)="nextSlide()"
+    *ngIf="currentSlide < partners.length - 1"
+  >
+    <span class="text">Swipe</span>
+    <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+  </div>
+</div>

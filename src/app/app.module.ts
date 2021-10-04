@@ -18,6 +18,9 @@ import { DoctorComponent } from './elements/doctor/doctor.component';
 import { DividerComponent } from './ui/elements/divider/divider.component';
 import { YelBorderBtnComponent } from './ui/elements/buttons/yel-border-btn/yel-border-btn.component';
 import { VerticalDividerComponent } from './ui/elements/vertical-divider/vertical-divider.component';
+import { PhotoBgComponent } from './ui/elements/photo-bg/photo-bg.component';
+import { ScreenGalleryComponent } from './ui/elements/screen-gallery/screen-gallery.component';
+import { BusinessPartnersComponent } from './elements/business-partners/business-partners.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { VerticalDividerComponent } from './ui/elements/vertical-divider/vertica
     DividerComponent,
     YelBorderBtnComponent,
     VerticalDividerComponent,
+    PhotoBgComponent,
+    ScreenGalleryComponent,
+    BusinessPartnersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

@@ -11,23 +11,41 @@
     *ngIf="type == SliderType.follicleIcon"
     class="bg"
   />
-  <div class="content">
-    <h1 [ngStyle]="{ color: mode.color }">
-      {{ mode.title }}
-    </h1>
-    <p>
-      {{ mode.content }}
-    </p>
-    <div
-      class="btn"
-      (click)="onNextClicked()"
-      *ngIf="!last && !(type == SliderType.follicleIcon)"
-    >
-      <span class="text">Swipe</span>
-      <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+  <img
+    src="assets/ui/par-title/bg6.png"
+    *ngIf="type == SliderType.howItWorks"
+    class="bg"
+    alt=""
+  />
+
+  <ng-template ngFor let-mode [ngForOf]="modes" let-i="index">
+    <div class="content">
+      <h1
+        [ngStyle]="{ color: mode.color }"
+        *ngIf="currentSlide == i"
+        [@rightSwipe]
+      >
+        {{ mode.title }}
+      </h1>
+      <p *ngIf="currentSlide == i" [@leftSwipe]>
+        {{ mode.content }}
+      </p>
+      <div
+        class="btn"
+        (click)="onNextClicked()"
+        *ngIf="
+          !(modes.length - 1 == currentSlide) &&
+          !(type == SliderType.follicleIcon) &&
+          currentSlide == i
+        "
+      >
+        <span class="text">Swipe</span>
+        <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+      </div>
     </div>
-  </div>
+  </ng-template>
 </div>
 <div class="photo" *ngIf="!(type == SliderType.aboutApp)">
-  <img src="{{ mode.img }}" alt="mode" />
+  <!-- <img src="{{ mode.img }}" alt="mode" /> -->
+  <!-- <app-photo-bg photo="{{ mode.img }}"></app-photo-bg> -->
 </div>

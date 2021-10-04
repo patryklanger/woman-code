@@ -14,6 +14,7 @@ export enum SliderType {
   calendar = 3,
   follicleIcon = 4,
   aboutApp = 5,
+  howItWorks = 6,
 }
 
 @Component({
@@ -31,11 +32,6 @@ export enum SliderType {
         animate('0.3s', style({ transform: 'translateX(-200vw)' })),
       ]),
     ]),
-    trigger('container', [
-      transition(':enter, :leave', [
-        query('@*', animateChild(), { optional: true }),
-      ]),
-    ]),
   ],
 })
 export class RightSwipeComponent implements OnInit {
@@ -49,9 +45,16 @@ export class RightSwipeComponent implements OnInit {
 
   currentSlide = 0;
 
+  imgs: string[] = [];
+
   constructor() {}
   nextMode() {
     if (this.modes.length - 1 >= this.currentSlide + 1) this.currentSlide++;
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.modes.forEach((e) => {
+      this.imgs.push(e.img);
+    });
+    console.log(this.imgs);
+  }
 }

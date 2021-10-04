@@ -1,0 +1,22 @@
+div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100vw;
+}
+.background-wrapper {
+  position: absolute;
+  height: 200%;
+  width: 200%;
+}
+.background {
+  position: fixed;
+  height: 100%;
+}
+.photo {
+  z-index: 1;
+  width: 65%;
+}
