@@ -1,9 +1,23 @@
 <div class="container">
   <div class="first_row row">
     <ng-template ngFor let-img [ngForOf]="firstRowImgs" let-i="index">
-      <img src="{{ img }}" alt="" />
+      <div class="gallery_element">
+        <div class="photo_wrapper">
+          <img src="{{ img }}" alt="" class="photo" />
+        </div>
+        <img src="assets/gallery/arrow.png" alt="" class="arrow" />
+      </div>
     </ng-template>
   </div>
 
-  <div class="second_row row"></div>
+  <div class="second_row row">
+    <ng-template ngFor let-img [ngForOf]="secondRowImgs" let-i="index">
+      <div class="gallery_element">
+        <div class="photo_wrapper">
+          <img src="{{ img }}" alt="" class="photo" />
+        </div>
+        <img src="assets/gallery/arrow.png" alt="" class="arrow" />
+      </div>
+    </ng-template>
+  </div>
 </div>

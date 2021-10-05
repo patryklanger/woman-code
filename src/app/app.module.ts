@@ -23,6 +23,7 @@ import { ScreenGalleryComponent } from './ui/elements/screen-gallery/screen-gall
 import { BusinessPartnersComponent } from './elements/business-partners/business-partners.component';
 import { GalleryComponent } from './elements/gallery/gallery.component';
 import { VideoComponent } from './elements/video/video.component';
+import { FooterComponent } from './elements/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { VideoComponent } from './elements/video/video.component';
     BusinessPartnersComponent,
     GalleryComponent,
     VideoComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
