@@ -36,7 +36,7 @@
       <p *ngIf="currentSlide == i" [@leftSwipe]>
         {{ mode.content }}
       </p>
-      <app-yellow-btn *ngIf="type == SliderType.aboutApp"
+      <app-yellow-btn (click)="toAboutApp()" *ngIf="type == SliderType.aboutApp"
         >Show me more</app-yellow-btn
       >
     </div>

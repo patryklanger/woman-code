@@ -94,7 +94,7 @@ export class PresentationPageComponent implements OnInit {
       title: 'Follicle icon',
       content:
         'Mniej więcej w połowie cyklu miesiaczkowego, pod wypływem hormonu luteinizującego, następnie pod wpływem hormonów uwolni komórkę jajową, która przez 12 godzin będzie gotowa do zapłodnienia. Tu znowu natura jest górą i my faceci musimy się do tego dostosować ;) 13 dzień jest dniem, kiedy pęcherzyk średnio pęka ;)',
-      img: '',
+      img: 'assets/presentation/modes/11.png',
     },
   ];
   aboutApp = [
@@ -102,7 +102,6 @@ export class PresentationPageComponent implements OnInit {
       title: 'About App',
       content:
         'WOMAN CODE ma za zadanie, zeby naze kobiety byla dla nas bardziej przewidywalne i mile!!! Aplikacja dla mezczyzn, ktorzy staraja sie o dziecko. Jak wiadomo, zeby nasze plemniki mogly sie polaczyc z komorka naszej kobiety musza byc silne i wypoczte i byc w odpowiednim czasie i lokalizacji',
-      img: 'assets/presentation/modes/11.png',
       color: '#FFD012',
     },
   ];

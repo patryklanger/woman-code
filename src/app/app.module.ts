@@ -24,6 +24,7 @@ import { BusinessPartnersComponent } from './elements/business-partners/business
 import { GalleryComponent } from './elements/gallery/gallery.component';
 import { VideoComponent } from './elements/video/video.component';
 import { FooterComponent } from './elements/footer/footer.component';
+import { AboutAppComponent } from './pages/about-app/about-app.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { FooterComponent } from './elements/footer/footer.component';
     GalleryComponent,
     VideoComponent,
     FooterComponent,
+    AboutAppComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

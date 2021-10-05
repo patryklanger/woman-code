@@ -8,6 +8,7 @@ import {
   transition,
   query,
 } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-par-title',
@@ -50,7 +51,7 @@ export class ParTitleComponent implements OnInit {
   @Input() type: SliderType = 1;
   @Input() last = false;
   @Output() nextClicked = new EventEmitter();
-  constructor() {
+  constructor(private router: Router) {
     this.modes.forEach((e) => {
       if (e.color == undefined) e.color = '#B7BDC8';
       if (e.textAlign == undefined) e.textAlign = 'right';
@@ -59,6 +60,9 @@ export class ParTitleComponent implements OnInit {
 
   onNextClicked() {
     this.nextClicked.emit();
+  }
+  toAboutApp() {
+    this.router.navigateByUrl('about-app');
   }
   ngOnInit(): void {}
 }
