@@ -9,7 +9,6 @@
 body,
 html {
   width: 100vw;
-  overflow-x: hidden;
 }
 
 h1 {
@@ -61,4 +60,13 @@ p {
 }
 .blue_btn:active {
   outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

@@ -21,6 +21,8 @@ import { VerticalDividerComponent } from './ui/elements/vertical-divider/vertica
 import { PhotoBgComponent } from './ui/elements/photo-bg/photo-bg.component';
 import { ScreenGalleryComponent } from './ui/elements/screen-gallery/screen-gallery.component';
 import { BusinessPartnersComponent } from './elements/business-partners/business-partners.component';
+import { GalleryComponent } from './elements/gallery/gallery.component';
+import { VideoComponent } from './elements/video/video.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { BusinessPartnersComponent } from './elements/business-partners/business
     PhotoBgComponent,
     ScreenGalleryComponent,
     BusinessPartnersComponent,
+    GalleryComponent,
+    VideoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

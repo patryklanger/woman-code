@@ -36,22 +36,22 @@
       <p *ngIf="currentSlide == i" [@leftSwipe]>
         {{ mode.content }}
       </p>
-      <div
-        class="btn"
-        (click)="onNextClicked()"
-        *ngIf="
-          !(modes.length - 1 == currentSlide) &&
-          !(type == SliderType.calendar) &&
-          !(type == SliderType.aboutApp) &&
-          currentSlide == i
-        "
-      >
-        <span class="text">Swipe</span>
-        <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
-      </div>
       <app-yellow-btn *ngIf="type == SliderType.aboutApp"
         >Show me more</app-yellow-btn
       >
+    </div>
+    <div
+      class="btn"
+      (click)="onNextClicked()"
+      *ngIf="
+        !(modes.length - 1 == currentSlide) &&
+        !(type == SliderType.calendar) &&
+        !(type == SliderType.aboutApp) &&
+        currentSlide == i
+      "
+    >
+      <span class="text">Swipe</span>
+      <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
     </div>
   </ng-template>
 </div>

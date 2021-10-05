@@ -53,6 +53,9 @@
   justify-self: flex-end;
 }
 .btn {
+  position: absolute;
+  bottom: 14%;
+  right: 3%;
   display: flex;
   align-items: center;
   justify-content: space-between;

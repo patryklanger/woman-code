@@ -30,18 +30,18 @@
       <p *ngIf="currentSlide == i" [@leftSwipe]>
         {{ mode.content }}
       </p>
-      <div
-        class="btn"
-        (click)="onNextClicked()"
-        *ngIf="
-          !(modes.length - 1 == currentSlide) &&
-          !(type == SliderType.follicleIcon) &&
-          currentSlide == i
-        "
-      >
-        <span class="text">Swipe</span>
-        <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
-      </div>
+    </div>
+    <div
+      class="btn"
+      (click)="onNextClicked()"
+      *ngIf="
+        !(modes.length - 1 == currentSlide) &&
+        !(type == SliderType.follicleIcon) &&
+        currentSlide == i
+      "
+    >
+      <span class="text">Swipe</span>
+      <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
     </div>
   </ng-template>
 </div>

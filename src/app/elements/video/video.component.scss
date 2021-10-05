@@ -1,0 +1,14 @@
+.video {
+  width: 50%;
+  aspect-ratio: 480 / 864;
+  position: absolute;
+  transform: translate(-6%, 5%);
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container img {
+  z-index: 10;
+  width: 110vw;
+}

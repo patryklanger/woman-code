@@ -4,3 +4,24 @@
   justify-content: space-around;
   margin-bottom: 41.5px;
 }
+.appstore {
+  position: relative;
+  width: fit-content;
+}
+.appstore_btn {
+  height: 100%;
+}
+.appstore::after {
+  position: absolute;
+  width: 109%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  background: gray;
+  opacity: 0.4;
+  border-radius: 10px;
+}
+.google_btn {
+  cursor: pointer;
+}

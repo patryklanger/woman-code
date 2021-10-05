@@ -1,12 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {
-  animateChild,
-  trigger,
-  style,
-  animate,
-  transition,
-  query,
-} from '@angular/animations';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-business-partners',
