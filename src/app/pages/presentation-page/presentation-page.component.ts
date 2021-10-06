@@ -92,7 +92,7 @@ export class PresentationPageComponent implements OnInit {
       title: 'Follicle icon',
       content:
         "Bubble visualization showing the interference of the follicles on the female cycle. For example, under the influence of the luteinizing hormone, the follicle ruptures and it will release the egg, which will be ready for fertilization for 12 hours. Remember, you can't fool nature.",
-      img: 'assets/presentation/modes/11.png',
+      img: 'assets/presentation/follicle.png',
     },
   ];
   aboutApp = [
