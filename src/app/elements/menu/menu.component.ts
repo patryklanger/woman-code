@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {
   trigger,
   state,
@@ -6,6 +6,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -31,10 +32,16 @@ import {
   ],
 })
 export class MenuComponent implements OnInit {
+  @Output() routeChanged = new EventEmitter<number>();
   opened = false;
-  constructor() {}
+  constructor(private router: Router) {}
   toggleMenuClick() {
     this.opened = !this.opened;
+  }
+  linkClicked(id: number) {
+    this.toggleMenuClick();
+    this.routeChanged.emit(id);
+    this.router.navigateByUrl('our-app/' + id);
   }
   ngOnInit(): void {}
 }

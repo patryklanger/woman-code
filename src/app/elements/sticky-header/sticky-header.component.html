@@ -1,4 +1,4 @@
 <div class="header">
-  <app-menu></app-menu>
+  <app-menu (routeChanged)="linkClicked($event)"></app-menu>
   <img src="assets/menu/menu-logo.png" alt="logo" (click)="onLogoClicked()" />
 </div>

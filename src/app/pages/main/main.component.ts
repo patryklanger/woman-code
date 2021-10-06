@@ -54,7 +54,7 @@ export class MainComponent implements OnInit {
     el.scrollIntoView({ behavior: 'smooth' });
   }
   onImageClicked() {
-    this.router.navigateByUrl('our-app');
+    this.router.navigateByUrl('our-app/0');
   }
 
   ngOnInit(): void {}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,8 +8,12 @@ import { Router } from '@angular/router';
 })
 export class StickyHeaderComponent implements OnInit {
   constructor(private router: Router) {}
+  @Output() routeChanged = new EventEmitter<number>();
   onLogoClicked() {
     this.router.navigateByUrl('');
+  }
+  linkClicked(id: any) {
+    this.routeChanged.emit(Number(id));
   }
   ngOnInit(): void {}
 }

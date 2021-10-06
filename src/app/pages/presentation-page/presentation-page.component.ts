@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { SliderType } from 'src/app/ui/right-swipe/right-swipe.component';
 
 @Component({
@@ -134,7 +135,46 @@ export class PresentationPageComponent implements OnInit {
         'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Maecenas Bibendum Porttitor Nunc, Ac Pretium Elit Fringilla Consequat. Vestibulum Ultricies Dui Et Urna Tincidunt, Sed Tempor Dolor Pulvinar.',
     },
   ];
-  constructor() {}
 
-  ngOnInit(): void {}
+  @ViewChild('mainSection') MainSection: ElementRef;
+  @ViewChild('modesSec') ModesSec: ElementRef;
+  @ViewChild('hormonsSec') HormonsSec: ElementRef;
+  @ViewChild('calendarSec') CalendarSec: ElementRef;
+  @ViewChild('follicleSec') FollicleSec: ElementRef;
+  @ViewChild('aboutAppSec') AboutAppSec: ElementRef;
+  @ViewChild('howItWorksSec') HowItWorksSec: ElementRef;
+  sections: ElementRef[] = [];
+  id = -1;
+  scrollInto(id: any) {
+    // if (this.id == -1) return;
+    if (id == 0) {
+      window.scrollTo({ top: 0, left: 0 });
+      return;
+    }
+    setTimeout(() => {
+      this.sections[id].nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }, 500);
+  }
+  constructor(private route: ActivatedRoute) {}
+  ngOnInit(): void {
+    console.log(this.id);
+  }
+  ngAfterViewInit() {
+    this.sections = [
+      this.MainSection,
+      this.ModesSec,
+      this.HormonsSec,
+      this.CalendarSec,
+      this.FollicleSec,
+      this.AboutAppSec,
+      this.HowItWorksSec,
+    ];
+    this.scrollInto(0);
+    this.id = Number(this.route.snapshot.paramMap.get('id'));
+    this.scrollInto(this.id);
+  }
+  ngAfterViewChecked() {}
 }

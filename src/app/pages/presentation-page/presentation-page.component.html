@@ -1,14 +1,23 @@
-<app-sticky-header></app-sticky-header>
+<app-sticky-header (routeChanged)="scrollInto($event)"></app-sticky-header>
 <div class="content">
-  <h1 sxpAnimate>We present something that was<br />not there</h1>
-  <app-video></app-video>
-  <h1 sxpAnimateRight class="yellow">What is<br />the most important</h1>
-  <app-right-swipe [modes]="modes" [type]="SliderType.modes"></app-right-swipe>
-  <app-right-swipe
-    [modes]="hormons"
-    [type]="SliderType.hormons"
-    sxpAnimate
-  ></app-right-swipe>
+  <section #mainSection id="main-section">
+    <h1 sxpAnimate>We present something that was<br />not there</h1>
+    <app-video></app-video>
+    <h1 sxpAnimateRight class="yellow">What is<br />the most important</h1>
+  </section>
+  <section #modesSec id="modes">
+    <app-right-swipe
+      [modes]="modes"
+      [type]="SliderType.modes"
+    ></app-right-swipe>
+  </section>
+  <section #hormonsSec id="hormons">
+    <app-right-swipe
+      [modes]="hormons"
+      [type]="SliderType.hormons"
+      sxpAnimate
+    ></app-right-swipe>
+  </section>
   <app-photo-bg></app-photo-bg>
   <div class="" animateOnScroll animationName="animated fadeIn">
     <h1 style="color: #ffd012">What else?</h1>
@@ -19,32 +28,37 @@
       dates 3 months ahead. Useful right? :)
     </p>
   </div>
-
-  <app-right-swipe [modes]="calendar" [type]="SliderType.calendar" sxpAnimate>
-  </app-right-swipe>
-
+  <section #calendarSec id="calendar">
+    <app-right-swipe [modes]="calendar" [type]="SliderType.calendar" sxpAnimate>
+    </app-right-swipe>
+  </section>
   <!-- <app-par-title-left
     [modes]="follicleIcon"
     [type]="SliderType.follicleIcon"
   ></app-par-title-left> -->
-  <app-right-swipe
-    [modes]="follicleIcon"
-    [type]="SliderType.follicleIcon"
-    sxpAnimate
-  ></app-right-swipe>
+  <section #follicleSec id="follicle">
+    <app-right-swipe
+      [modes]="follicleIcon"
+      [type]="SliderType.follicleIcon"
+      sxpAnimate
+    ></app-right-swipe>
+  </section>
 
   <!-- <app-par-title
     [modes]="aboutApp"
     [type]="SliderType.aboutApp"
   ></app-par-title> -->
-  <app-par-title
-    [modes]="aboutApp"
-    [type]="SliderType.aboutApp"
-    sxpAnimate
-  ></app-par-title>
-  <div class="howItWorkParagraph" sxpAnimate>
-    <h1>How<br />it Works</h1>
-    <!-- <p>
+  <section #aboutAppSec id="about-app">
+    <app-par-title
+      [modes]="aboutApp"
+      [type]="SliderType.aboutApp"
+      sxpAnimate
+    ></app-par-title>
+  </section>
+  <section #howItWorksSec id="how-it-works">
+    <div class="howItWorkParagraph" sxpAnimate>
+      <h1 style="transform: translateY(100px)">How<br />it Works</h1>
+      <!-- <p>
       Aplikacja ułatwi ci zrozumieć i przewidzieć Jej zachowanie tzw Jej zmianie
       zachowanie, że jednego tygodnia jest super a za dwa tygodnie, kłótnia i
       ciche dni przez 5 dni. Woman Code przygotuje cię do przejścia przez to, bo
@@ -52,18 +66,19 @@
       określeniach zasadach w ciałach Naszych kobiet.
     </p>
     <app-yellow-btn>Show me more</app-yellow-btn> -->
-  </div>
-  <div class="couplePhoto">
-    <img
-      src="assets/presentation/modes/couple.png"
-      alt="couple"
-      class="coupleImg"
-    />
-    <app-stores></app-stores>
-  </div>
-  <div class="watchTutorial" sxpAnimate>
-    <app-yel-border-btn>Watch tutorial</app-yel-border-btn>
-  </div>
+    </div>
+    <div class="couplePhoto">
+      <img
+        src="assets/presentation/modes/couple.png"
+        alt="couple"
+        class="coupleImg"
+      />
+      <app-stores></app-stores>
+    </div>
+    <div class="watchTutorial" sxpAnimate>
+      <app-yel-border-btn>Watch tutorial</app-yel-border-btn>
+    </div>
+  </section>
   <!-- <div style="margin-bottom: 187px">
     <h1 style="color: #ffd012">Medical verification</h1>
     <app-doctor [doctor]="doctors[0]"></app-doctor>
