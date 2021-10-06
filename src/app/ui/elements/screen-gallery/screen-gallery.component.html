@@ -8,7 +8,7 @@
   <div class="shadow">
     <img src="assets/presentation/doctors/shadow.png" alt="" sxpAnimateRight />
   </div>
-  <div class="screen-wrapper">
+  <div class="screen-wrapper" sxpAnimate>
     <ng-template ngFor let-img [ngForOf]="imgs" let-i="index">
       <div class="screen" *ngIf="currentSlide == i" [@inOutAnimation]>
         <img src="{{ imgs[currentSlide] }}" class="mockup" alt="" />
