@@ -1,11 +1,21 @@
 <div class="main">
-  <img src="assets/anim/Mockup_opacity.png" class="mockup" alt="" />
+  <img
+    src="assets/anim/Mockup_opacity.png"
+    class="mockup"
+    alt=""
+    sxpAnimateRight
+  />
   <div class="shadow">
-    <img src="assets/presentation/doctors/shadow.png" alt="" />
+    <img src="assets/presentation/doctors/shadow.png" alt="" sxpAnimateRight />
   </div>
   <div class="screen-wrapper">
     <ng-template ngFor let-img [ngForOf]="imgs" let-i="index">
-      <div class="screen" *ngIf="currentSlide == i" [@inOutAnimation]>
+      <div
+        class="screen"
+        *ngIf="currentSlide == i"
+        [@inOutAnimation]
+        sxpAnimate
+      >
         <img src="{{ imgs[currentSlide] }}" class="mockup" alt="" />
       </div>
     </ng-template>
