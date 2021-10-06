@@ -9,7 +9,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/women-code/index.html"
+        "destination": "/index.html"
       }
     ]
   }
