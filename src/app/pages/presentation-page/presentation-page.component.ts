@@ -11,7 +11,7 @@ export class PresentationPageComponent implements OnInit {
   SliderType = SliderType;
   modes = [
     {
-      title: 'Modes',
+      title: 'Funtions',
       content:
         'The most important function of the application. Thanks to it, you can conceive a child, have a weekend together, have a party with friends, or we can simply connect and have sex. Click on a mode and see how it works.',
       img: 'assets/anim/modes/1.png',
@@ -100,7 +100,7 @@ export class PresentationPageComponent implements OnInit {
     {
       title: 'About App',
       content:
-        'WOMAN CODE ma za zadanie, zeby naze kobiety byla dla nas bardziej przewidywalne i mile!!! Aplikacja dla mezczyzn, ktorzy staraja sie o dziecko. Jak wiadomo, zeby nasze plemniki mogly sie polaczyc z komorka naszej kobiety musza byc silne i wypoczte i byc w odpowiednim czasie i lokalizacji',
+        'Nature has endowed women with a cycle of the day that repeats every 27 days.\nThe application will help you understand and predict the behavior of your partner, because most of the changes are caused by hormones that give specific symptoms at a given time.',
       color: '#FFD012',
     },
   ];

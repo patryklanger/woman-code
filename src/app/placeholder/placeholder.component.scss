@@ -15,6 +15,7 @@
 }
 .logo {
   width: 203px;
+  margin-bottom: 20px;
 }
 .right {
   position: relative;
@@ -24,16 +25,16 @@
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  font-size: 35px;
+  font-size: 31px;
   line-height: 121.4%;
   display: flex;
   align-items: center;
   color: #ffd012;
 
   position: absolute;
-  top: 34.5%;
+  top: 35.5%;
   width: 80%;
-  left: 23%;
+  left: 24%;
 }
 .right h2 {
   font-family: Nunito;
@@ -42,17 +43,18 @@
   font-size: 45px;
   line-height: 121.4%;
   text-align: left;
+  text-transform: none;
   /* or 55px */
 
-  left: 23%;
+  left: 24%;
 
-  top: 50%;
+  top: 55%;
   color: #929db1;
   position: absolute;
 }
 .android {
   position: absolute;
-  top: 65%;
+  top: 73.5%;
   left: 40%;
 }
 .bg {
