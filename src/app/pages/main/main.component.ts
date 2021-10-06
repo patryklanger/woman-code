@@ -40,7 +40,6 @@ export class MainComponent implements OnInit {
 
     this.opacity < 0 ? (this.opacity = 0) : true;
     this.opacity > 1 ? (this.opacity = 1) : true;
-    console.log(this.opacity);
   }
   opacity = 0;
   constructor(private winRef: WindowRefService, private router: Router) {}

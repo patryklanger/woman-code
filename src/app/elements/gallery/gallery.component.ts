@@ -30,7 +30,5 @@ export class GalleryComponent implements OnInit {
     this.secondRowImgs = this.imgs.slice(indexToSlice);
     this.firstRowImgs.push(...this.firstRowImgs);
     this.secondRowImgs.push(...this.secondRowImgs);
-    console.log(this.firstRowImgs);
-    console.log(this.secondRowImgs);
   }
 }

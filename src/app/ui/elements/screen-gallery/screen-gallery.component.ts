@@ -30,7 +30,5 @@ export class ScreenGalleryComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.imgs);
-  }
+  ngOnInit(): void {}
 }

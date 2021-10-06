@@ -58,6 +58,5 @@ export class RightSwipeComponent implements OnInit {
     this.modes.forEach((e) => {
       this.imgs.push(e.img);
     });
-    console.log(this.imgs);
   }
 }

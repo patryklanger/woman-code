@@ -159,9 +159,7 @@ export class PresentationPageComponent implements OnInit {
     }, 500);
   }
   constructor(private route: ActivatedRoute) {}
-  ngOnInit(): void {
-    console.log(this.id);
-  }
+  ngOnInit(): void {}
   ngAfterViewInit() {
     this.sections = [
       this.MainSection,
