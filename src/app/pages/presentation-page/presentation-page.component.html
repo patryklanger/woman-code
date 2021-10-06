@@ -1,5 +1,8 @@
-<app-sticky-header (routeChanged)="scrollInto($event)"></app-sticky-header>
-<div class="content">
+<app-sticky-header
+  class="desktop--hide"
+  (routeChanged)="scrollInto($event)"
+></app-sticky-header>
+<div class="content desktop--hide">
   <section #mainSection id="main-section">
     <h1 sxpAnimate>We present something that was<br />not there</h1>
     <app-video></app-video>
@@ -104,4 +107,7 @@
   <h1 style="margin-bottom: 46px" sxpAnimateRight>Gallery</h1>
   <app-gallery sxpAnimate></app-gallery>
   <app-footer sxpAnimate></app-footer>
+</div>
+<div class="placeholder">
+  <app-placeholder></app-placeholder>
 </div>
