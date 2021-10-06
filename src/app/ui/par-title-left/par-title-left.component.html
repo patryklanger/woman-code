@@ -3,12 +3,12 @@
     src="assets/ui/par-title/bg1.png"
     alt=""
     class="bg"
-    *ngIf="type == SliderType.hormons"
+    *ngIf="type == SliderType.modes"
   />
   <img
-    src="assets/ui/par-title/bg3.png"
+    src="assets/ui/par-title/bg2.png"
     alt=""
-    *ngIf="type == SliderType.follicleIcon"
+    *ngIf="type == SliderType.calendar"
     class="bg"
   />
   <img
@@ -36,7 +36,7 @@
       (click)="onPreviousClicked()"
       *ngIf="
         !(0 == currentSlide) &&
-        !(type == SliderType.follicleIcon) &&
+        !(type == SliderType.calendar) &&
         currentSlide == i
       "
     >
@@ -48,7 +48,7 @@
       (click)="onNextClicked()"
       *ngIf="
         !(modes.length - 1 == currentSlide) &&
-        !(type == SliderType.follicleIcon) &&
+        !(type == SliderType.calendar) &&
         currentSlide == i
       "
     >

@@ -2,15 +2,16 @@
   [modes]="modes"
   (nextClicked)="nextMode()"
   (previousClicked)="previousMode()"
-  *ngIf="type == 1 || type == 3 || type == 5"
+  *ngIf="type == 2 || type == 4 || type == 5"
   style="display: block"
   (swiperight)="nextMode()"
   [currentSlide]="currentSlide"
   [type]="type"
 ></app-par-title>
 <app-par-title-left
-  *ngIf="type == 2 || type == 4"
+  *ngIf="type == 1 || type == 3"
   [modes]="modes"
+  [type]="type"
   (nextClicked)="nextMode()"
   (previousClicked)="previousMode()"
   (swiperight)="nextMode()"

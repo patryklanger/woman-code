@@ -3,13 +3,13 @@
     src="assets/ui/par-title/bg.png"
     alt=""
     class="bg"
-    *ngIf="type == SliderType.modes"
+    *ngIf="type == SliderType.hormons"
   />
   <img
-    src="assets/ui/par-title/bg2.png"
+    src="assets/ui/par-title/bg3.png"
     alt=""
     class="bg"
-    *ngIf="type == SliderType.calendar"
+    *ngIf="type == SliderType.follicleIcon"
   />
   <img
     src="assets/ui/par-title/bg4.png"
@@ -22,7 +22,7 @@
     <div
       class="content"
       [ngClass]="{
-        calendarContent: type == SliderType.calendar,
+        calendarContent: type == SliderType.follicleIcon,
         aboutAppContent: type == SliderType.aboutApp
       }"
     >
@@ -45,7 +45,7 @@
       (click)="onNextClicked()"
       *ngIf="
         !(modes.length - 1 == currentSlide) &&
-        !(type == SliderType.calendar) &&
+        !(type == SliderType.follicleIcon) &&
         !(type == SliderType.aboutApp) &&
         currentSlide == i
       "
@@ -58,7 +58,7 @@
       (click)="onNextClicked()"
       *ngIf="
         !(modes.length - 1 == currentSlide) &&
-        !(type == SliderType.calendar) &&
+        !(type == SliderType.follicleIcon) &&
         !(type == SliderType.aboutApp) &&
         currentSlide == i
       "
@@ -71,7 +71,7 @@
       (click)="onPreviousClicked()"
       *ngIf="
         !(0 == currentSlide) &&
-        !(type == SliderType.calendar) &&
+        !(type == SliderType.follicleIcon) &&
         !(type == SliderType.aboutApp) &&
         currentSlide == i
       "

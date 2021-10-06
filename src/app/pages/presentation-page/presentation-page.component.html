@@ -8,6 +8,13 @@
     <app-video></app-video>
     <h1 sxpAnimateRight class="yellow">What is<br />the most important</h1>
   </section>
+  <section #aboutAppSec id="about-app">
+    <app-par-title
+      [modes]="aboutApp"
+      [type]="SliderType.aboutApp"
+      sxpAnimate
+    ></app-par-title>
+  </section>
   <section #modesSec id="modes">
     <app-right-swipe
       [modes]="modes"
@@ -51,13 +58,6 @@
     [modes]="aboutApp"
     [type]="SliderType.aboutApp"
   ></app-par-title> -->
-  <section #aboutAppSec id="about-app">
-    <app-par-title
-      [modes]="aboutApp"
-      [type]="SliderType.aboutApp"
-      sxpAnimate
-    ></app-par-title>
-  </section>
   <section #howItWorksSec id="how-it-works">
     <div class="howItWorkParagraph" sxpAnimate>
       <h1 style="transform: translateY(100px)">How<br />it Works</h1>

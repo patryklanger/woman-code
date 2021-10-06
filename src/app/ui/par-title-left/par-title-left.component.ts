@@ -42,7 +42,7 @@ export class ParTitleLeftComponent implements OnInit {
     textAlign?: string;
   }[] = [];
   SliderType = SliderType;
-  @Input() type = SliderType.hormons;
+  @Input() type = SliderType.modes;
   @Input() currentSlide = 0;
   centered = false;
   textAlign = 'right';
