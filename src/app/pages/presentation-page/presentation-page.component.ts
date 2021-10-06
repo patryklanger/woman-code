@@ -17,33 +17,34 @@ export class PresentationPageComponent implements OnInit {
       img: 'assets/anim/modes/1.png',
       textAlign: 'right',
     },
+
+    {
+      title: 'Menstruation',
+      content:
+        '5 days before your period, we will keep you informed about your period. Your support during this time will be invaluable.',
+      img: 'assets/anim/modes/2.png',
+      color: '#C64F90',
+    },
     {
       title: 'Sex',
       content:
         "You will get notifications when your partner wants to have sex and about 'safe' periods when the risk of conception is low and you can enjoy sex without worrying about an unwanted pregnancy.",
-      img: 'assets/anim/modes/2.png',
+      img: 'assets/anim/modes/3.png',
       color: '#FFD012',
     },
     {
       title: 'Child',
       content:
         '3 days before the fertile days, you will receive a notification from your partner with health recommendations, thanks to which we have a better chance of success.',
-      img: 'assets/anim/modes/3.png',
+      img: 'assets/anim/modes/4.png',
       color: '#5FAAE3',
     },
     {
       title: 'Not fertile',
       content:
         'Helpful information when planning a joint vacation, long, serious conversations or increased physical exertion.',
-      img: 'assets/anim/modes/4.png',
-      color: '#6B7FE8',
-    },
-    {
-      title: 'Menstruation',
-      content:
-        '5 days before your period, we will keep you informed about your period. Your support during this time will be invaluable.',
       img: 'assets/anim/modes/5.png',
-      color: '#C64F90',
+      color: '#6B7FE8',
     },
   ];
   hormons = [
