@@ -51,6 +51,7 @@ export class ParTitleComponent implements OnInit {
   @Input() type: SliderType = 1;
   @Input() last = false;
   @Output() nextClicked = new EventEmitter();
+  @Output() previousClicked = new EventEmitter();
   constructor(private router: Router) {
     this.modes.forEach((e) => {
       if (e.color == undefined) e.color = '#B7BDC8';
@@ -60,6 +61,9 @@ export class ParTitleComponent implements OnInit {
 
   onNextClicked() {
     this.nextClicked.emit();
+  }
+  onPreviousClicked() {
+    this.previousClicked.emit();
   }
   toAboutApp() {
     this.router.navigateByUrl('about-app');

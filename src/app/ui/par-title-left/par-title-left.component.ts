@@ -47,6 +47,7 @@ export class ParTitleLeftComponent implements OnInit {
   centered = false;
   textAlign = 'right';
   @Output() nextClicked = new EventEmitter();
+  @Output() previousClicked = new EventEmitter();
   constructor() {
     this.modes.forEach((e) => {
       if (e.color == undefined) e.color = '#B7BDC8';
@@ -55,6 +56,9 @@ export class ParTitleLeftComponent implements OnInit {
   }
   onNextClicked() {
     this.nextClicked.emit();
+  }
+  onPreviousClicked() {
+    this.previousClicked.emit();
   }
 
   ngOnInit(): void {}

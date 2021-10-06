@@ -32,6 +32,18 @@
       </p>
     </div>
     <div
+      class="btn_back"
+      (click)="onPreviousClicked()"
+      *ngIf="
+        !(0 == currentSlide) &&
+        !(type == SliderType.follicleIcon) &&
+        currentSlide == i
+      "
+    >
+      <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+      <span class="text">Back</span>
+    </div>
+    <div
       class="btn"
       (click)="onNextClicked()"
       *ngIf="

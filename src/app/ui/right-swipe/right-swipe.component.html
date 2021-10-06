@@ -1,6 +1,7 @@
 <app-par-title
   [modes]="modes"
   (nextClicked)="nextMode()"
+  (previousClicked)="previousMode()"
   *ngIf="type == 1 || type == 3 || type == 5"
   style="display: block"
   (swiperight)="nextMode()"
@@ -11,6 +12,7 @@
   *ngIf="type == 2 || type == 4"
   [modes]="modes"
   (nextClicked)="nextMode()"
+  (previousClicked)="previousMode()"
   (swiperight)="nextMode()"
   [currentSlide]="currentSlide"
   style="display: block"

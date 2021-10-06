@@ -51,6 +51,9 @@ export class RightSwipeComponent implements OnInit {
   nextMode() {
     if (this.modes.length - 1 >= this.currentSlide + 1) this.currentSlide++;
   }
+  previousMode() {
+    if (this.currentSlide - 1 >= 0) this.currentSlide--;
+  }
   ngOnInit(): void {
     this.modes.forEach((e) => {
       this.imgs.push(e.img);
