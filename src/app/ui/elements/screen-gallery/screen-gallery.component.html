@@ -10,12 +10,7 @@
   </div>
   <div class="screen-wrapper">
     <ng-template ngFor let-img [ngForOf]="imgs" let-i="index">
-      <div
-        class="screen"
-        *ngIf="currentSlide == i"
-        [@inOutAnimation]
-        sxpAnimate
-      >
+      <div class="screen" *ngIf="currentSlide == i" [@inOutAnimation]>
         <img src="{{ imgs[currentSlide] }}" class="mockup" alt="" />
       </div>
     </ng-template>
