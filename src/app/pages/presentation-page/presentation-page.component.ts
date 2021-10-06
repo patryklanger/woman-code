@@ -11,9 +11,9 @@ export class PresentationPageComponent implements OnInit {
   SliderType = SliderType;
   modes = [
     {
-      title: 'Funtions',
+      title: 'App Modes',
       content:
-        'The most important function of the application. Thanks to it, you can conceive a child, have a weekend together, have a party with friends, or we can simply connect and have sex. Click on a mode and see how it works.',
+        'The most important feature of the application. Thanks to it, you can conceive a child, have a weekend together, have a party with friends, or we can simply connect and have sex. Click on a mode and see how it works.',
       img: 'assets/anim/modes/1.png',
       textAlign: 'right',
     },
@@ -28,14 +28,14 @@ export class PresentationPageComponent implements OnInit {
     {
       title: 'Sex',
       content:
-        "You will get notifications when your partner wants to have sex and about 'safe' periods when the risk of conception is low and you can enjoy sex without worrying about an unwanted pregnancy.",
+        "You will get notifications about 'safe' periods when the risk of conception is low and you can enjoy sex without worrying about an unwanted pregnancy.",
       img: 'assets/anim/modes/3.png',
       color: '#FFD012',
     },
     {
       title: 'Child',
       content:
-        '3 days before the fertile days, you will receive a notification from your partner with health recommendations, thanks to which we have a better chance of success.',
+        '3 days before the fertile days, you will receive a notification from the app with health recommendations, thanks to which we have a better chance of getting pregnant.',
       img: 'assets/anim/modes/4.png',
       color: '#5FAAE3',
     },
@@ -49,9 +49,9 @@ export class PresentationPageComponent implements OnInit {
   ];
   hormons = [
     {
-      title: "Hormon's",
+      title: 'Hormones',
       content:
-        "A feature that will help you understand women's behavior. Hormones have a huge impact, among others on well-being. The 4 most important hormones that are activated on a specific basis and at the right time. Science doesn't lie, check it out!",
+        "A feature that will help you understand woman's behavior. Hormones have a huge impact, among others factors on well-being. The 4 most important hormones that are activated on a specific basis and at the right time. Science doesn't lie, check it out!",
       img: 'assets/anim/hormons/1.png',
     },
     {
@@ -62,7 +62,7 @@ export class PresentationPageComponent implements OnInit {
       color: '#70C5CB',
     },
     {
-      title: 'Progesteron',
+      title: 'Progesterone',
       content:
         'It works for emotional balance, calms the libido after ovulation, contributes to well-being. Responsible for regulating the menstrual cycle and maintaining pregnancy.',
       img: 'assets/anim/hormons/3.png',
@@ -75,7 +75,7 @@ export class PresentationPageComponent implements OnInit {
       color: '#94B700',
     },
     {
-      title: 'Lutropina',
+      title: 'Lutropin',
       content: 'Releases the egg from the follicle.',
       img: 'assets/anim/hormons/5.png',
       color: '#AC9800',
@@ -173,7 +173,7 @@ export class PresentationPageComponent implements OnInit {
     ];
     this.scrollInto(0);
     this.id = Number(this.route.snapshot.paramMap.get('id'));
-    this.scrollInto(this.id);
+    if (this.id != -1) this.scrollInto(this.id);
   }
   ngAfterViewChecked() {}
 }

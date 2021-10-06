@@ -10,6 +10,8 @@ export class VideoComponent implements OnInit {
   @ViewChild('videoPlayer') player: ElementRef;
   ngOnInit(): void {}
   ngAfterViewInit() {
+    this.player.nativeElement.muted = true;
+
     this.player.nativeElement.play();
   }
 }

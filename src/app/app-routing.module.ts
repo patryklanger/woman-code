@@ -7,6 +7,7 @@ import { AboutAppComponent } from './pages/about-app/about-app.component';
 const routes: Routes = [
   { path: '', component: MainComponent, pathMatch: 'full' },
   { path: 'our-app/:id', component: PresentationPageComponent },
+  { path: 'our-app', component: PresentationPageComponent },
   { path: 'about-app', component: AboutAppComponent },
 ];
 
