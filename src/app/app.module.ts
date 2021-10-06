@@ -29,6 +29,7 @@ import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { AnimateDirective } from './animate.directive';
 import { AnimateRightDirective } from './animate-right.directive';
+import { MyAutoplayDirective } from './my-autoplay.directive';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { AnimateRightDirective } from './animate-right.directive';
     PlaceholderComponent,
     AnimateDirective,
     AnimateRightDirective,
+    MyAutoplayDirective,
   ],
   imports: [
     BrowserModule,
