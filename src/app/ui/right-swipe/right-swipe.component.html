@@ -3,6 +3,7 @@
   (nextClicked)="nextMode()"
   *ngIf="type == 1 || type == 3 || type == 5"
   style="display: block"
+  (swiperight)="nextMode()"
   [currentSlide]="currentSlide"
   [type]="type"
 ></app-par-title>
@@ -10,6 +11,7 @@
   *ngIf="type == 2 || type == 4"
   [modes]="modes"
   (nextClicked)="nextMode()"
+  (swiperight)="nextMode()"
   [currentSlide]="currentSlide"
   style="display: block"
 ></app-par-title-left>
