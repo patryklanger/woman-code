@@ -1,12 +1,32 @@
-.content {
-  background: linear-gradient(180deg, #232526, #232526, #141e30);
-  min-height: 100vh;
-  padding-top: 105px;
-  width: 100vw;
-  padding-left: 15px;
-  padding-right: 15px;
-  overflow-x: hidden;
+@media (max-width: 767px) {
+  .content {
+    background: linear-gradient(180deg, #232526, #232526, #141e30);
+    min-height: 100vh;
+    padding-top: 105px;
+    width: 100vw;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow-x: hidden;
+  }
+  h1 {
+    margin-bottom: 30px;
+  }
+  .placeholder {
+    display: none;
+  }
 }
-h1 {
-  margin-bottom: 30px;
+@media (min-width: 768px) {
+  .desktop--hide {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .desktop--hide {
+    display: none;
+  }
+}
+@media (min-width: 1025px) {
+  .desktop--hide {
+    display: none;
+  }
 }
