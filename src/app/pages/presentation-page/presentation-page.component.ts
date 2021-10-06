@@ -10,37 +10,37 @@ export class PresentationPageComponent implements OnInit {
   SliderType = SliderType;
   modes = [
     {
-      title: 'Tryby',
+      title: 'Modes',
       content:
-        'Aplikacja podpowie Ci kiedy bezpiecznie umówić sie z kolegami na piwo czy ryby, a kiedy bezpieczniej zostać w domu',
+        'The most important function of the application. Thanks to it, you can conceive a child, have a weekend together, have a party with friends, or we can simply connect and have sex. Click on a mode and see how it works.',
       img: 'assets/anim/modes/1.png',
       textAlign: 'right',
     },
     {
       title: 'Sex',
       content:
-        'Dostaniesz powiadomienia o dniach kiedy Twoja kobieta ma ochotę na sex jest to bezpiecznych okresach, kiedy ryzyko poczęcia jest niskie i moecie cieszyć się seksem bez obaw o niechcianą ciązę.',
+        "You will get notifications when your partner wants to have sex and about 'safe' periods when the risk of conception is low and you can enjoy sex without worrying about an unwanted pregnancy.",
       img: 'assets/anim/modes/2.png',
       color: '#FFD012',
     },
     {
       title: 'Child',
       content:
-        '3 dni przed dniami płodnymi od partnerki dostaniesz powiadomienie z zaleceniami np. odstawienie kofeiny, papierosów, zaprzestanie masturbacji oraz aplikacja poinformuje Cię o największej ochocie na zblienia i poczucui bycia atrakcyjną seksualnie Twojej partnerki',
+        '3 days before the fertile days, you will receive a notification from your partner with health recommendations, thanks to which we have a better chance of success.',
       img: 'assets/anim/modes/3.png',
       color: '#5FAAE3',
     },
     {
-      title: 'No period',
+      title: 'Not fertile',
       content:
-        'Pomocna informacja przy planowaniu wspólnych wakacji, długich powaznych rozmow czy zwiększonego wysiłku fizycznego. Jest to moment na długie dyskusje i rozmowy',
+        'Helpful information when planning a joint vacation, long, serious conversations or increased physical exertion.',
       img: 'assets/anim/modes/4.png',
       color: '#6B7FE8',
     },
     {
       title: 'Menstruation',
       content:
-        'W tym okresie lepiej nie poruszać tematów trudnych z swoją kobietą. Twoja partnerka z racji rozpoczęcia się krawienia może być zmęczona, czuć się ociężała i nieatrakcyjna. Twoje wsparcie w tym czasie będzie nieocenione.',
+        '5 days before your period, we will keep you informed about your period. Your support during this time will be invaluable.',
       img: 'assets/anim/modes/5.png',
       color: '#C64F90',
     },
@@ -49,34 +49,32 @@ export class PresentationPageComponent implements OnInit {
     {
       title: "Hormon's",
       content:
-        'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Maecenas Bibendum Porttitor Nunc, Ac Pretium Elit Fringilla Consequat. Vestibulum Ultricies Dui Et Urna Tincidunt, Sed Tempor Dolor Pulvinar.',
+        "A feature that will help you understand women's behavior. Hormones have a huge impact, among others on well-being. The 4 most important hormones that are activated on a specific basis and at the right time. Science doesn't lie, check it out!",
       img: 'assets/anim/hormons/1.png',
     },
     {
       title: 'Estrogen',
       content:
-        'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Maecenas Bibendum Porttitor Nunc, Ac Pretium Elit Fringilla Consequat. Vestibulum Ultricies Dui Et Urna Tincidunt, Sed Tempor Dolor Pulvinar.',
+        'A hormone responsible for the sense of femininity, increased libido, positive mood and agency. Estrogen helps to create the environment in the uterus in case of pregnancy.',
       img: 'assets/anim/hormons/2.png',
       color: '#70C5CB',
     },
     {
       title: 'Progesteron',
       content:
-        'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Maecenas Bibendum Porttitor Nunc, Ac Pretium Elit Fringilla Consequat. Vestibulum Ultricies Dui Et Urna Tincidunt, Sed Tempor Dolor Pulvinar.',
+        'It works for emotional balance, calms the libido after ovulation, contributes to well-being. Responsible for regulating the menstrual cycle and maintaining pregnancy.',
       img: 'assets/anim/hormons/3.png',
       color: '#CB6A2D',
     },
     {
       title: 'FSH',
-      content:
-        'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Maecenas Bibendum Porttitor Nunc, Ac Pretium Elit Fringilla Consequat. Vestibulum Ultricies Dui Et Urna Tincidunt, Sed Tempor Dolor Pulvinar.',
+      content: 'It stimulates the growth of follicles in the ovary.',
       img: 'assets/anim/hormons/4.png',
       color: '#94B700',
     },
     {
       title: 'Lutropina',
-      content:
-        'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Maecenas Bibendum Porttitor Nunc, Ac Pretium Elit Fringilla Consequat. Vestibulum Ultricies Dui Et Urna Tincidunt, Sed Tempor Dolor Pulvinar.',
+      content: 'Releases the egg from the follicle.',
       img: 'assets/anim/hormons/5.png',
       color: '#AC9800',
     },
@@ -85,15 +83,15 @@ export class PresentationPageComponent implements OnInit {
     {
       title: 'Calendar',
       content:
-        'Dzięki tej funkcji mozez zobaczyć w jakim dniu cyklu będzie Twoja kobieta i to na 3 miesiące do przodu. Dowiesz się jak wtedy zachować się do danej sytuacji hormonalnej. Dzięki temu moesz zaplanować sobie urlop czy inne plany z kobietą. Aplikacja będzie dostarczać Tobie',
-      img: 'assets/presentation/modes/11.png',
+        'Thanks to this function, you can see 3 months in advance on what day of the cycle your woman will be. In combination with other functions of the application, you will be able to match the date of your dream vacation or other plans and nothing will spoil you. If the cycle changes, we will let you know.',
+      img: 'assets/presentation/calendar.png',
     },
   ];
   follicleIcon = [
     {
       title: 'Follicle icon',
       content:
-        'Mniej więcej w połowie cyklu miesiaczkowego, pod wypływem hormonu luteinizującego, następnie pod wpływem hormonów uwolni komórkę jajową, która przez 12 godzin będzie gotowa do zapłodnienia. Tu znowu natura jest górą i my faceci musimy się do tego dostosować ;) 13 dzień jest dniem, kiedy pęcherzyk średnio pęka ;)',
+        "Bubble visualization showing the interference of the follicles on the female cycle. For example, under the influence of the luteinizing hormone, the follicle ruptures and it will release the egg, which will be ready for fertilization for 12 hours. Remember, you can't fool nature.",
       img: 'assets/presentation/modes/11.png',
     },
   ];

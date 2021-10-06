@@ -71,10 +71,24 @@
     width: 264px;
     align-self: center;
   }
+  .placeholder {
+    display: none;
+  }
 } // for only styles between 320px and 768px (most mobile devies)
 @media (min-width: 768px) {
+  .main {
+    display: none;
+  }
 } // general desktop && tablet styles if needed
 @media (min-width: 768px) and (max-width: 1024px) {
+  .main,
+  .menu {
+    display: none;
+  }
 } // only tablet styles
 @media (min-width: 1025px) {
+  .main,
+  .menu {
+    display: none;
+  }
 }

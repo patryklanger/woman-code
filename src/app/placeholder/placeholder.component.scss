@@ -1,0 +1,60 @@
+.placeholder {
+  width: 100vw;
+  height: 100vh;
+  background: #202121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-left: 74px;
+  padding-top: 47px;
+  width: 587px;
+}
+.logo {
+  width: 203px;
+}
+.right {
+  position: relative;
+  margin-left: -100px;
+}
+.right h3 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 121.4%;
+  display: flex;
+  align-items: center;
+  color: #ffd012;
+
+  position: absolute;
+  top: 34.5%;
+  width: 80%;
+  left: 23%;
+}
+.right h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 121.4%;
+  text-align: left;
+  /* or 55px */
+
+  left: 23%;
+
+  top: 50%;
+  color: #929db1;
+  position: absolute;
+}
+.android {
+  position: absolute;
+  top: 65%;
+  left: 40%;
+}
+.bg {
+  width: 876px;
+}

@@ -25,6 +25,10 @@ import { GalleryComponent } from './elements/gallery/gallery.component';
 import { VideoComponent } from './elements/video/video.component';
 import { FooterComponent } from './elements/footer/footer.component';
 import { AboutAppComponent } from './pages/about-app/about-app.component';
+import { PlaceholderComponent } from './placeholder/placeholder.component';
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+import { AnimateDirective } from './animate.directive';
+import { AnimateRightDirective } from './animate-right.directive';
 
 @NgModule({
   declarations: [
@@ -50,8 +54,16 @@ import { AboutAppComponent } from './pages/about-app/about-app.component';
     VideoComponent,
     FooterComponent,
     AboutAppComponent,
+    PlaceholderComponent,
+    AnimateDirective,
+    AnimateRightDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    AnimateOnScrollModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

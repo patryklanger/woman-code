@@ -1,26 +1,26 @@
 <app-sticky-header></app-sticky-header>
 <div class="content">
-  <h1>We present something that was<br />not there</h1>
+  <h1 sxpAnimate>We present something that was<br />not there</h1>
   <app-video></app-video>
-  <h1 class="yellow">What is<br />the most important</h1>
+  <h1 sxpAnimateRight class="yellow">What is<br />the most important</h1>
   <app-right-swipe [modes]="modes" [type]="SliderType.modes"></app-right-swipe>
   <app-right-swipe
     [modes]="hormons"
     [type]="SliderType.hormons"
+    sxpAnimate
   ></app-right-swipe>
   <app-photo-bg></app-photo-bg>
-  <div class="">
+  <div class="" animateOnScroll animationName="animated fadeIn">
     <h1 style="color: #ffd012">What else?</h1>
     <p style="text-align: center; margin-top: 30px">
-      Woman Code wskaze Ci np.: <br />
-      ze za 3 miesiace np.<br />
-      21.07.2021 jego kobieta<br />
-      będzie miała dni niepłodne<br />
-      lub miesiączkę<br />
+      The application will show you, for example: 10/12/2021. Your woman will
+      feel worse. How is this possible? All thanks to the study of the hormonal
+      nature and mathematics. When you select one of the four, you can see the
+      dates 3 months ahead. Useful right? :)
     </p>
   </div>
 
-  <app-right-swipe [modes]="calendar" [type]="SliderType.calendar">
+  <app-right-swipe [modes]="calendar" [type]="SliderType.calendar" sxpAnimate>
   </app-right-swipe>
 
   <!-- <app-par-title-left
@@ -30,6 +30,7 @@
   <app-right-swipe
     [modes]="follicleIcon"
     [type]="SliderType.follicleIcon"
+    sxpAnimate
   ></app-right-swipe>
 
   <!-- <app-par-title
@@ -39,8 +40,9 @@
   <app-par-title
     [modes]="aboutApp"
     [type]="SliderType.aboutApp"
+    sxpAnimate
   ></app-par-title>
-  <div class="howItWorkParagraph">
+  <div class="howItWorkParagraph" sxpAnimate>
     <h1>How<br />it Works</h1>
     <!-- <p>
       Aplikacja ułatwi ci zrozumieć i przewidzieć Jej zachowanie tzw Jej zmianie
@@ -59,7 +61,7 @@
     />
     <app-stores></app-stores>
   </div>
-  <div class="watchTutorial">
+  <div class="watchTutorial" sxpAnimate>
     <app-yel-border-btn>Watch tutorial</app-yel-border-btn>
   </div>
   <!-- <div style="margin-bottom: 187px">
@@ -84,7 +86,7 @@
     <app-yellow-btn>Show me more</app-yellow-btn>
   </div> -->
   <!-- <app-business-partners [partners]="partners"></app-business-partners> -->
-  <h1 style="margin-bottom: 46px">Gallery</h1>
-  <app-gallery></app-gallery>
-  <app-footer></app-footer>
+  <h1 style="margin-bottom: 46px" sxpAnimateRight>Gallery</h1>
+  <app-gallery sxpAnimate></app-gallery>
+  <app-footer sxpAnimate></app-footer>
 </div>
