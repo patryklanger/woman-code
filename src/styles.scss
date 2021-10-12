@@ -12,7 +12,7 @@ html {
 }
 
 h1 {
-  font: normal normal 600 58px/60px Nunito;
+  font: normal normal 600 #{"min(58px,15.5vw)"}/#{"min(60px,16vw)"} Nunito;
   letter-spacing: 0px;
   color: #929db1;
   opacity: 1;
@@ -29,7 +29,7 @@ h2 {
 }
 p {
   text-align: left;
-  font: normal normal 600 20px/25px Nunito;
+  font: normal normal 600 #{"min(20px,5.3vw)"}/#{"min(25px,6.67vw)"} Nunito;
   letter-spacing: 0px;
   color: #929db1;
 }
