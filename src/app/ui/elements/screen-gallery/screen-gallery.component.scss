@@ -3,7 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  // overflow: hidden;
+  position: relative;
 }
 .mockup {
   z-index: 10;
@@ -13,8 +14,8 @@
   z-index: 0;
   position: absolute;
   width: 100vw;
-  height: 65%;
-  overflow-y: hidden;
+  height: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +29,9 @@
   position: absolute;
   width: 100%;
 }
+.screen img {
+  width: 100%;
+}
 .screen-wrapper {
   overflow: hidden;
   z-index: 0;
@@ -35,6 +39,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 77%;
+  width: 85%;
   aspect-ratio: 2/5;
 }

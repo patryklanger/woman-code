@@ -86,10 +86,16 @@
   .menu {
     display: none;
   }
+  .mobile--site {
+    display: none;
+  }
 } // only tablet styles
 @media (min-width: 1025px) {
   .main,
   .menu {
+    display: none;
+  }
+  .mobile--site {
     display: none;
   }
 }

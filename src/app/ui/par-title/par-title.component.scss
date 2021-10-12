@@ -9,9 +9,13 @@
   transform: translateX(-20%);
   width: 200vw;
 }
+.content h1 {
+  font-size: #{"min(58px,15.5vw)"};
+  line-height: #{"min(60px,16vw)"};
+}
 .content p {
   margin-top: 20px;
-  font: normal normal 600 20px/25px Nunito;
+  font: normal normal 600 #{"min(20px,5.3vw)"}/#{"min(25px,6.67vw)"} Nunito;
   letter-spacing: 0px;
   color: #929db1;
   opacity: 1;
@@ -44,22 +48,24 @@
   right: 0 !important;
 }
 .btn .text {
-  font: normal normal 600 20px/25px Nunito;
+  font: normal normal 600 #{"min(20px,5.3vw)"}/#{"min(25px,6.67vw)"} Nunito;
   letter-spacing: 0px;
   color: #ffd012;
   margin-right: 13.9px;
 }
 
 .btn_back .text {
-  font: normal normal 600 20px/25px Nunito;
+  font: normal normal 600 #{"min(20px,5.3vw)"}/#{"min(25px,6.67vw)"} Nunito;
   letter-spacing: 0px;
   color: #ffd012;
   margin-left: 13.9px;
 }
 .btn_back img {
+  width: #{"min(46px,12.24vw)"};
   transform: rotate(180deg);
 }
 .btn img {
+  width: #{"min(46px,12.24vw)"};
   justify-self: flex-end;
 }
 .btn {
