@@ -7,6 +7,7 @@ import {
   transition,
   query,
 } from '@angular/animations';
+import { Mode } from 'src/app/utility/mode';
 
 export enum SliderType {
   modes = 1,
@@ -35,11 +36,7 @@ export enum SliderType {
   ],
 })
 export class RightSwipeComponent implements OnInit {
-  @Input() modes: {
-    title: string;
-    content: string;
-    img: string;
-  }[] = [];
+  @Input() modes: Mode[] = [];
 
   @Input() type: SliderType = 1;
 
@@ -56,7 +53,7 @@ export class RightSwipeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.modes.forEach((e) => {
-      this.imgs.push(e.img);
+      if (e.img) this.imgs.push(e.img);
     });
   }
 }

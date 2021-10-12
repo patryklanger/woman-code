@@ -8,6 +8,9 @@ import {
   transition,
 } from '@angular/animations';
 import { Router } from '@angular/router';
+import { PresentationPageComponent } from '../presentation-page/presentation-page.component';
+import { Mode } from 'src/app/utility/mode';
+import { ContentService } from '../../content.service';
 
 @Component({
   selector: 'app-main',
@@ -30,6 +33,7 @@ import { Router } from '@angular/router';
   ],
 })
 export class MainComponent implements OnInit {
+  modes: Mode[] = [];
   @HostListener('window:scroll', ['$event'])
   onScroll($event: Event) {
     this.opacity =
@@ -42,7 +46,13 @@ export class MainComponent implements OnInit {
     this.opacity > 1 ? (this.opacity = 1) : true;
   }
   opacity = 0;
-  constructor(private winRef: WindowRefService, private router: Router) {}
+  constructor(
+    private winRef: WindowRefService,
+    private router: Router,
+    private contentService: ContentService
+  ) {
+    this.modes = contentService.getModes();
+  }
   onClicked() {
     alert('XD');
   }

@@ -9,6 +9,7 @@ import {
   query,
 } from '@angular/animations';
 import { Router } from '@angular/router';
+import { Mode } from '../../utility/mode';
 
 @Component({
   selector: 'app-par-title',
@@ -36,12 +37,7 @@ import { Router } from '@angular/router';
   ],
 })
 export class ParTitleComponent implements OnInit {
-  @Input() modes: {
-    title: string;
-    content: string;
-    color?: string;
-    textAlign?: string;
-  }[] = [];
+  @Input() modes: Mode[] = [];
 
   centered = false;
   textAlign = 'right';

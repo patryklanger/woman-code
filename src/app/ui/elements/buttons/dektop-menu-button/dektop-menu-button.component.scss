@@ -1,0 +1,22 @@
+button {
+  border: none;
+  background: none;
+  padding: #{"min(15px,0.9375vh)"} #{"min(8px,0.5vh)"};
+}
+p {
+  color: #929db1;
+}
+
+button.active {
+  border: 2px solid #fff012;
+  padding: #{"min(15px,0.9375vh)"} #{"min(8px,0.5vh)"};
+  border-radius: #{"min(10px,0.625vh)"};
+}
+.active p {
+  color: #ffd012;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}

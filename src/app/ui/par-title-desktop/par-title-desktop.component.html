@@ -1,0 +1,40 @@
+<div class="container" sxpAnimate>
+  <img
+    src="assets/ui/par-title/bg.png"
+    alt=""
+    class="bg"
+    *ngIf="type == SliderType.modes"
+  />
+  <img
+    src="assets/ui/par-title/bg2.png"
+    alt=""
+    *ngIf="type == SliderType.calendar"
+    class="bg"
+  />
+  <img
+    src="assets/ui/par-title/bg6.png"
+    *ngIf="type == SliderType.howItWorks"
+    class="bg"
+    alt=""
+  />
+  <ng-template ngFor let-mode [ngForOf]="modes" let-i="index">
+    <div class="content">
+      <h1
+        [ngStyle]="{ color: mode.color }"
+        *ngIf="currentSlide == i"
+        [@rightSwipe]
+      >
+        {{ mode.title }}
+      </h1>
+      <p *ngIf="currentSlide == i" [@leftSwipe]>{{ mode.content }}</p>
+    </div>
+    <div class="btn_back">
+      <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+      <span class="text"><p>Back</p></span>
+    </div>
+    <div class="btn">
+      <span class="text"><p>Next</p></span>
+      <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,29 @@
+button {
+  padding: #{"min(18.5px,1.285vw)"} #{"min(36px,2.5vw)"};
+  background: #4070f4;
+  border-radius: #{"min(10px,0.69vw)"};
+  border: none;
+  position: relative;
+  z-index: 1;
+}
+button p {
+  color: white;
+  font-size: #{"min(16px,1.11vw)"};
+  line-height: #{"min(16px,1.11vw)"};
+}
+button:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  border-radius: #{"min(10px,0.69vw)"};
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #4070f4;
+  filter: blur(3px);
+}
+button:active,
+button:focus {
+  outline: none;
+}

@@ -30,6 +30,10 @@ import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { AnimateDirective } from './animate.directive';
 import { AnimateRightDirective } from './animate-right.directive';
 import { MyAutoplayDirective } from './my-autoplay.directive';
+import { HeaderDesktopComponent } from './header-desktop/header-desktop.component';
+import { DektopMenuButtonComponent } from './ui/elements/buttons/dektop-menu-button/dektop-menu-button.component';
+import { BlueBtnComponent } from './ui/elements/buttons/blue-btn/blue-btn.component';
+import { ParTitleDesktopComponent } from './ui/par-title-desktop/par-title-desktop.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +63,10 @@ import { MyAutoplayDirective } from './my-autoplay.directive';
     AnimateDirective,
     AnimateRightDirective,
     MyAutoplayDirective,
+    HeaderDesktopComponent,
+    DektopMenuButtonComponent,
+    BlueBtnComponent,
+    ParTitleDesktopComponent,
   ],
   imports: [
     BrowserModule,

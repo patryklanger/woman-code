@@ -1,0 +1,13 @@
+.header {
+  background: #232526;
+  width: 100vw;
+  padding-top: #{"min(57.56px,3.5975vh)"};
+  padding-bottom: #{"min(57.56px,3.5975vh)"};
+}
+.header--content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 4.4vw;
+  display: flex;
+  justify-content: space-between;
+}

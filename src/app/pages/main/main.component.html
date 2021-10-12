@@ -1,46 +1,73 @@
 <div class="mobile--site">
-<app-menu class="menu"></app-menu>
-<div class="main">
-  <div
-    class="blue_bg"
-    (click)="scrollToStart()"
-    [@inOutAnimation]
-    *ngIf="opacity == 1"
-  ></div>
-  <div class="content" [ngClass]="{ 'on--top': opacity == 0 }">
-    <img src="assets/main_page/woman-code.png" alt="logo" class="woman-logo" />
-
-    <h2>We Create An Application That Will Help You Understand Your Woman</h2>
-    <!-- <button class="blue_btn" (click)="onClicked()">Watch Video</button> -->
-    <p
-      style="
-        margin-top: 30px;
-        margin-bottom: 30px;
-        text-align: center;
-        font-size: 130%;
-      "
-    >
-      This is beta version of this app
-    </p>
-    <app-stores></app-stores>
-    <app-scroll-down (btnClicked)="scroll(target)"></app-scroll-down>
-  </div>
-  <div class="phone" #target>
+  <app-menu class="menu"></app-menu>
+  <div class="main">
     <div
-      class="black_frame"
-      *ngIf="opacity != 0 && opacity != 1"
-      [@outStayAnimation]
-      [ngStyle]="{ opacity: opacity }"
+      class="blue_bg"
       (click)="scrollToStart()"
+      [@inOutAnimation]
+      *ngIf="opacity == 1"
     ></div>
-    <img
-      src="assets/main_page/phone.png"
-      alt="app"
-      (click)="onImageClicked()"
-    />
+    <div class="content" [ngClass]="{ 'on--top': opacity == 0 }">
+      <img
+        src="assets/main_page/woman-code.png"
+        alt="logo"
+        class="woman-logo"
+      />
+
+      <h2>We Create An Application That Will Help You Understand Your Woman</h2>
+      <!-- <button class="blue_btn" (click)="onClicked()">Watch Video</button> -->
+      <p
+        style="
+          margin-top: 30px;
+          margin-bottom: 30px;
+          text-align: center;
+          font-size: 130%;
+        "
+      >
+        This is beta version of this app
+      </p>
+      <app-stores></app-stores>
+      <app-scroll-down (btnClicked)="scroll(target)"></app-scroll-down>
+    </div>
+    <div class="phone" #target>
+      <div
+        class="black_frame"
+        *ngIf="opacity != 0 && opacity != 1"
+        [@outStayAnimation]
+        [ngStyle]="{ opacity: opacity }"
+        (click)="scrollToStart()"
+      ></div>
+      <img
+        src="assets/main_page/phone.png"
+        alt="app"
+        (click)="onImageClicked()"
+      />
+    </div>
   </div>
 </div>
 <div class="placeholder">
   <app-placeholder></app-placeholder>
 </div>
-</div>
+<!-- <div class="desktop--site">
+  <app-header-desktop></app-header-desktop>
+  <div class="dektop--content">
+    <h1 class="main--header">
+      We create an application<br />that will help you understand your woman.
+    </h1>
+    <app-blue-btn class="watch-btn">Watch Video</app-blue-btn>
+    <app-stores class="app-stores"></app-stores>
+    <div class="video content--container">
+      <div class="flex--equal--column">
+        <app-video></app-video>
+      </div>
+      <div class="header--container flex--equal--column">
+        <h1 class="flex--equal--column">
+          We present something that was not there
+        </h1>
+      </div>
+    </div>
+    <div class="modes">
+      <app-par-title-desktop [modes]="modes"></app-par-title-desktop>
+    </div>
+  </div>
+</div> -->
