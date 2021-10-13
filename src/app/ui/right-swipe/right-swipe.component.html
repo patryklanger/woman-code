@@ -1,24 +1,48 @@
-<app-par-title
-  [modes]="modes"
-  (nextClicked)="nextMode()"
-  (previousClicked)="previousMode()"
-  *ngIf="type == 2 || type == 4 || type == 5"
-  style="display: block"
-  (swiperight)="nextMode()"
-  [currentSlide]="currentSlide"
-  [type]="type"
-></app-par-title>
-<app-par-title-left
-  *ngIf="type == 1 || type == 3"
-  [modes]="modes"
-  [type]="type"
-  (nextClicked)="nextMode()"
-  (previousClicked)="previousMode()"
-  (swiperight)="nextMode()"
-  [currentSlide]="currentSlide"
-  style="display: block"
-></app-par-title-left>
-<app-screen-gallery
-  [imgs]="imgs"
-  [currentSlide]="currentSlide"
-></app-screen-gallery>
+<div class="container">
+  <app-par-title
+    [modes]="modes"
+    (nextClicked)="nextMode()"
+    (previousClicked)="previousMode()"
+    *ngIf="(type == 2 || type == 4 || type == 5) && !desktop"
+    style="display: block"
+    (swiperight)="nextMode()"
+    [currentSlide]="currentSlide"
+    [type]="type"
+  ></app-par-title>
+  <app-par-title-left
+    *ngIf="(type == 1 || type == 3) && !desktop"
+    [modes]="modes"
+    [type]="type"
+    (nextClicked)="nextMode()"
+    (previousClicked)="previousMode()"
+    (swiperight)="nextMode()"
+    [currentSlide]="currentSlide"
+    style="display: block"
+  ></app-par-title-left>
+  <app-screen-gallery
+    class="gallery"
+    [class.is--left]="desktop && (type == 2 || type == 4)"
+    [imgs]="imgs"
+    [currentSlide]="currentSlide"
+  ></app-screen-gallery>
+
+  <!-- desktop -->
+
+  <app-par-title-desktop
+    *ngIf="desktop && (type == 1 || type == 3)"
+    [modes]="modes"
+    [currentSlide]="currentSlide"
+    [type]="type"
+    (nextClicked)="nextMode()"
+    (previousClicked)="previousMode()"
+  >
+  </app-par-title-desktop>
+  <app-par-title-left-desktop
+    *ngIf="desktop && (type == 2 || type == 4)"
+    [modes]="modes"
+    [type]="type"
+    (nextClicked)="nextMode()"
+    (previousClicked)="previousMode()"
+    [currentSlide]="currentSlide"
+  ></app-par-title-left-desktop>
+</div>

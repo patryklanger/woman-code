@@ -16,11 +16,7 @@
 
       <h2>We Create An Application That Will Help You Understand Your Woman</h2>
       <!-- <button class="blue_btn" (click)="onClicked()">Watch Video</button> -->
-      <p
-        class="beta--version--p"
-      >
-        This is beta version of this app
-      </p>
+      <p class="beta--version--p">This is beta version of this app</p>
       <app-stores></app-stores>
       <app-scroll-down (btnClicked)="scroll(target)"></app-scroll-down>
     </div>
@@ -40,10 +36,10 @@
     </div>
   </div>
 </div>
-<div class="placeholder">
+<!-- <div class="placeholder">
   <app-placeholder></app-placeholder>
-</div>
-<!-- <div class="desktop--site">
+</div> -->
+<div class="desktop--site">
   <app-header-desktop></app-header-desktop>
   <div class="dektop--content">
     <h1 class="main--header">
@@ -62,7 +58,17 @@
       </div>
     </div>
     <div class="modes">
-      <app-par-title-desktop [modes]="modes"></app-par-title-desktop>
+      <app-right-swipe
+        [modes]="modes"
+        [desktop]="true"
+        [type]="SliderType.modes"
+      ></app-right-swipe>
+      <app-right-swipe
+        class="left-swipe"
+        [modes]="hormons"
+        [desktop]="true"
+        [type]="SliderType.hormons"
+      ></app-right-swipe>
     </div>
   </div>
-</div> -->
+</div>

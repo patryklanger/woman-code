@@ -34,6 +34,7 @@ import { HeaderDesktopComponent } from './header-desktop/header-desktop.componen
 import { DektopMenuButtonComponent } from './ui/elements/buttons/dektop-menu-button/dektop-menu-button.component';
 import { BlueBtnComponent } from './ui/elements/buttons/blue-btn/blue-btn.component';
 import { ParTitleDesktopComponent } from './ui/par-title-desktop/par-title-desktop.component';
+import { ParTitleLeftDesktopComponent } from './ui/par-title-left-desktop/par-title-left-desktop.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { ParTitleDesktopComponent } from './ui/par-title-desktop/par-title-deskt
     DektopMenuButtonComponent,
     BlueBtnComponent,
     ParTitleDesktopComponent,
+    ParTitleLeftDesktopComponent,
   ],
   imports: [
     BrowserModule,

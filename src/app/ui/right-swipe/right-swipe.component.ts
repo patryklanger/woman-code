@@ -37,9 +37,9 @@ export enum SliderType {
 })
 export class RightSwipeComponent implements OnInit {
   @Input() modes: Mode[] = [];
-
   @Input() type: SliderType = 1;
-
+  @Input() desktop = false;
+  SliderType = SliderType;
   currentSlide = 0;
 
   imgs: string[] = [];

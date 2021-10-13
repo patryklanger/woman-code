@@ -1,0 +1,20 @@
+@media (min-width: 768px) {
+  .container {
+    position: relative;
+    width: 100%;
+  }
+  .gallery {
+    height: 61.35%;
+    width: 20%;
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    top: 27%;
+    right: 12%;
+  }
+  .is--left {
+    right: unset;
+    left: 25%;
+    top: 20%;
+  }
+}

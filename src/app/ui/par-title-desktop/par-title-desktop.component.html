@@ -28,11 +28,27 @@
       </h1>
       <p *ngIf="currentSlide == i" [@leftSwipe]>{{ mode.content }}</p>
     </div>
-    <div class="btn_back">
+    <div
+      class="btn_back"
+      (click)="onPreviousClicked()"
+      *ngIf="
+        !(0 == currentSlide) &&
+        !(type == SliderType.calendar) &&
+        currentSlide == i
+      "
+    >
       <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
       <span class="text"><p>Back</p></span>
     </div>
-    <div class="btn">
+    <div
+      class="btn"
+      (click)="onNextClicked()"
+      *ngIf="
+        !(modes.length - 1 == currentSlide) &&
+        !(type == SliderType.calendar) &&
+        currentSlide == i
+      "
+    >
       <span class="text"><p>Next</p></span>
       <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
     </div>

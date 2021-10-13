@@ -91,7 +91,7 @@
     display: none;
   }
   .placeholder {
-    display: block;
+    display: none;
     overflow: hidden;
   }
   .mobile--site {
@@ -139,5 +139,8 @@
     padding-left: #{"min(127px,8.82vw)"};
     display: flex;
     align-items: center;
+  }
+  .left-swipe {
+    transform: translateX(50%);
   }
 }

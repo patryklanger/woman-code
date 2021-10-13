@@ -1,6 +1,3 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { SliderType } from 'src/app/ui/right-swipe/right-swipe.component';
-import { Mode } from '../../utility/mode';
 import {
   animateChild,
   trigger,
@@ -9,10 +6,13 @@ import {
   transition,
   query,
 } from '@angular/animations';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SliderType } from '../right-swipe/right-swipe.component';
+
 @Component({
-  selector: 'app-par-title-desktop',
-  templateUrl: './par-title-desktop.component.html',
-  styleUrls: ['./par-title-desktop.component.scss'],
+  selector: 'app-par-title-left-desktop',
+  templateUrl: './par-title-left-desktop.component.html',
+  styleUrls: ['./par-title-left-desktop.component.scss'],
   animations: [
     trigger('leftSwipe', [
       transition(':enter', [
@@ -34,11 +34,18 @@ import {
     ]),
   ],
 })
-export class ParTitleDesktopComponent implements OnInit {
+export class ParTitleLeftDesktopComponent implements OnInit {
+  @Input() modes: {
+    title: string;
+    content: string;
+    color?: string;
+    textAlign?: string;
+  }[] = [];
   SliderType = SliderType;
   @Input() type = SliderType.modes;
-  @Input() modes: Mode[] = [];
   @Input() currentSlide = 0;
+  centered = false;
+  textAlign = 'right';
   @Output() nextClicked = new EventEmitter();
   @Output() previousClicked = new EventEmitter();
   constructor() {
@@ -53,6 +60,5 @@ export class ParTitleDesktopComponent implements OnInit {
   onPreviousClicked() {
     this.previousClicked.emit();
   }
-
   ngOnInit(): void {}
 }

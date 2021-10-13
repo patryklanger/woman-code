@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <div class="container" sxpAnimate>
+    <img
+      src="assets/ui/par-title/bg1.png"
+      alt=""
+      class="bg"
+      *ngIf="type == SliderType.hormons"
+    />
+    <img
+      src="assets/ui/par-title/bg3.png"
+      alt=""
+      *ngIf="type == SliderType.follicleIcon"
+      class="bg"
+    />
+    <img
+      src="assets/ui/par-title/bg4.png"
+      *ngIf="type == SliderType.aboutApp"
+      class="bg"
+      alt=""
+    />
+    <ng-template ngFor let-mode [ngForOf]="modes" let-i="index">
+      <div class="content">
+        <h1
+          [ngStyle]="{ color: mode.color }"
+          *ngIf="currentSlide == i"
+          [@rightSwipe]
+        >
+          {{ mode.title }}
+        </h1>
+        <p *ngIf="currentSlide == i" [@leftSwipe]>{{ mode.content }}</p>
+
+        <app-yellow-btn *ngIf="type == SliderType.aboutApp"
+          >Show me more</app-yellow-btn
+        >
+      </div>
+      <div
+        class="btn_back"
+        (click)="onPreviousClicked()"
+        *ngIf="
+          !(0 == currentSlide) &&
+          !(type == SliderType.calendar) &&
+          currentSlide == i
+        "
+      >
+        <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+        <span class="text"><p>Back</p></span>
+      </div>
+      <div
+        class="btn"
+        (click)="onNextClicked()"
+        *ngIf="
+          !(modes.length - 1 == currentSlide) &&
+          !(type == SliderType.calendar) &&
+          currentSlide == i
+        "
+      >
+        <span class="text"><p>Next</p></span>
+        <img src="assets/ui/par-title/right-arrow-yellow.png" alt="right" />
+      </div>
+    </ng-template>
+  </div>
+</div>

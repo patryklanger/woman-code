@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 import { PresentationPageComponent } from '../presentation-page/presentation-page.component';
 import { Mode } from 'src/app/utility/mode';
 import { ContentService } from '../../content.service';
+import { SliderType } from 'src/app/ui/right-swipe/right-swipe.component';
 
 @Component({
   selector: 'app-main',
@@ -34,6 +35,8 @@ import { ContentService } from '../../content.service';
 })
 export class MainComponent implements OnInit {
   modes: Mode[] = [];
+  hormons: Mode[] = [];
+  SliderType = SliderType;
   @HostListener('window:scroll', ['$event'])
   onScroll($event: Event) {
     this.opacity =
@@ -52,6 +55,7 @@ export class MainComponent implements OnInit {
     private contentService: ContentService
   ) {
     this.modes = contentService.getModes();
+    this.hormons = contentService.getHormones();
   }
   onClicked() {
     alert('XD');
