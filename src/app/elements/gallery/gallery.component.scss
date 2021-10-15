@@ -6,7 +6,7 @@
 }
 .first_row {
   transform: rotate(-3deg) translateX(-10%);
-  animation: moveSlideshow 25s linear infinite;
+  animation: moveSlideshow 20s linear infinite;
 }
 .second_row {
   transform: rotate(-3deg) translateX(-58%);
@@ -63,5 +63,36 @@
 @keyframes moveSlideshowSec {
   100% {
     transform: rotate(-3deg) translateX(-10%);
+  }
+}
+@media (min-width: 768px) {
+  .row {
+    width: 600%;
+  }
+  .gallery_element {
+    width: 3.75%;
+  }
+  .first_row {
+    animation: moveSlideshow 30s linear infinite;
+  }
+  .activeElement::after {
+    opacity: 0;
+  }
+  .second_row {
+    transform: rotate(-3deg) translateX(-33.27%);
+    animation: moveSlideshowSec 25s linear infinite;
+  }
+  .active {
+    animation-play-state: paused;
+  }
+  @keyframes moveSlideshow {
+    100% {
+      transform: rotate(-3deg) translateX(-33.27%);
+    }
+  }
+  @keyframes moveSlideshowSec {
+    100% {
+      transform: rotate(-3deg) translateX(-10%);
+    }
   }
 }
