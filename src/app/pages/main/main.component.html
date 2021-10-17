@@ -58,6 +58,10 @@
         </h1>
       </div>
     </div>
+
+    <section id="how--it--works">
+      <app-about-app-desktop></app-about-app-desktop>
+    </section>
     <div class="modes">
       <app-right-swipe
         [modes]="modes"
@@ -93,10 +97,27 @@
         [type]="SliderType.follicleIcon"
       ></app-right-swipe>
     </section>
-    <section id="how--it--works">
-      <app-about-app-desktop></app-about-app-desktop>
-    </section>
+    <h1 style="color: #ffd012; text-align: center; margin-bottom: 15px">
+      How it works
+    </h1>
+    <div style="width: 100%; display: flex; justify-content: center">
+      <p
+        style="
+          margin-bottom: 59px;
+          width: 51%;
+          color: #929db1;
+          text-align: center;
+        "
+      >
+        Explore our app there! Download app for one of platforms and enjoy it!
+        <br />Additionally you can check out tutorial video below!
+      </p>
+    </div>
 
+    <app-stores style="margin-bottom: 82px"></app-stores>
+    <div style="width: 100%; display: flex; justify-content: center">
+      <app-yel-border-btn>Tutorial will be available soon</app-yel-border-btn>
+    </div>
     <div class="gallery" style="margin-bottom: 200px">
       <app-gallery [desktop]="true"></app-gallery>
     </div>
