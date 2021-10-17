@@ -1,0 +1,40 @@
+.couple {
+  width: 64.93%;
+  align-self: flex-end;
+  margin-left: auto;
+}
+.container {
+  display: flex;
+  position: relative;
+  margin-bottom: 100px;
+}
+.sec {
+  position: absolute;
+  width: 27.84%;
+  max-width: 401px;
+  right: 55%;
+}
+.about--app-sec {
+  top: 14%;
+}
+.how--it--works--sec {
+  top: 78%;
+}
+.sec p {
+  color: #929db1;
+  margin-top: 28px;
+  margin-bottom: 53px;
+}
+.sec h2 {
+  color: #ffd012;
+}
+app-stores {
+  position: absolute;
+  top: 102%;
+  right: 25%;
+}
+.tutorial--btn {
+  position: absolute;
+  right: 19%;
+  top: 115%;
+}

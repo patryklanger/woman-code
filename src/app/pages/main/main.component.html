@@ -48,6 +48,7 @@
     <app-blue-btn class="watch-btn">Watch Video</app-blue-btn>
     <app-stores class="app-stores"></app-stores>
     <div class="video content--container">
+      <img src="assets/desktop/1/shadow.png" class="shadow--video" alt="" />
       <div class="flex--equal--column">
         <app-video></app-video>
       </div>
@@ -70,7 +71,33 @@
         [type]="SliderType.hormons"
       ></app-right-swipe>
     </div>
-    <div class="gallery">
+    <section id="what--else">
+      <h1 class="bigger--h1">What else?</h1>
+      <p class="bigger--p">
+        Woman Code Wskażę Ci Np.: Że Za 3 Miesięcy Np.<br />21.07.2021 Jego
+        Kobieta Będzie Miała Dni Nie Płodne<br />
+        Lub Miesiączkę.
+      </p>
+    </section>
+    <section id="calendar">
+      <app-right-swipe
+        [modes]="calendar"
+        [desktop]="true"
+        [type]="SliderType.calendar"
+      ></app-right-swipe>
+    </section>
+    <section id="follicle">
+      <app-right-swipe
+        [modes]="follicleIcon"
+        [desktop]="true"
+        [type]="SliderType.follicleIcon"
+      ></app-right-swipe>
+    </section>
+    <section id="how--it--works">
+      <app-about-app-desktop></app-about-app-desktop>
+    </section>
+
+    <div class="gallery" style="margin-bottom: 200px">
       <app-gallery [desktop]="true"></app-gallery>
     </div>
     <app-footer></app-footer>

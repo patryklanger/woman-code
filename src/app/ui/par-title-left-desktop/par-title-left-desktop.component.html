@@ -1,25 +1,25 @@
 <div class="wrapper">
   <div class="container" sxpAnimate>
+    <img src="assets/desktop/backgrounds/1.png" alt="" class="bg" />
     <img
-      src="assets/ui/par-title/bg1.png"
-      alt=""
-      class="bg"
+      #hormonesIcon
       *ngIf="type == SliderType.hormons"
+      src="assets/desktop/backgrounds/dna.png"
+      alt=""
+      class="icon"
     />
     <img
-      src="assets/ui/par-title/bg3.png"
-      alt=""
+      #follicleIcon
       *ngIf="type == SliderType.follicleIcon"
-      class="bg"
-    />
-    <img
-      src="assets/ui/par-title/bg4.png"
-      *ngIf="type == SliderType.aboutApp"
-      class="bg"
+      src="assets/desktop/backgrounds/microscope.png"
       alt=""
+      class="icon follicle--icon"
     />
     <ng-template ngFor let-mode [ngForOf]="modes" let-i="index">
-      <div class="content">
+      <div
+        class="content"
+        [class.follicleContent]="type == SliderType.follicleIcon"
+      >
         <h1
           [ngStyle]="{ color: mode.color }"
           *ngIf="currentSlide == i"

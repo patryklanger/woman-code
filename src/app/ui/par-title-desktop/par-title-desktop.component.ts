@@ -1,4 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+  ElementRef,
+  HostListener,
+} from '@angular/core';
 import { SliderType } from 'src/app/ui/right-swipe/right-swipe.component';
 import { Mode } from '../../utility/mode';
 import {
@@ -36,11 +45,32 @@ import {
 })
 export class ParTitleDesktopComponent implements OnInit {
   SliderType = SliderType;
+  innerWidth = 0;
   @Input() type = SliderType.modes;
   @Input() modes: Mode[] = [];
   @Input() currentSlide = 0;
   @Output() nextClicked = new EventEmitter();
   @Output() previousClicked = new EventEmitter();
+  @ViewChild('icon') icon: ElementRef;
+  @ViewChild('calendarIcon') calendarIcon: ElementRef;
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(e: any) {
+    if (this.type == SliderType.modes) {
+      var xOffset = (e.clientX / this.innerWidth) * 180;
+      this.icon.nativeElement.style.transform = 'rotate(' + xOffset + 'deg)';
+    } else if (this.type == SliderType.calendar) {
+      var halfWidth = this.innerWidth / 2;
+      var xOffset = (e.clientX - halfWidth) / this.innerWidth;
+      var angle = xOffset * 60;
+      var translate = xOffset * 200;
+      this.calendarIcon.nativeElement.style.transform =
+        'rotate(' + angle * -1 + 'deg) translateX(' + translate + '%)';
+    }
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(e: any) {
+    this.innerWidth = window.innerWidth;
+  }
   constructor() {
     this.modes.forEach((e) => {
       if (e.color == undefined) e.color = '#B7BDC8';
@@ -54,5 +84,7 @@ export class ParTitleDesktopComponent implements OnInit {
     this.previousClicked.emit();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
+  }
 }

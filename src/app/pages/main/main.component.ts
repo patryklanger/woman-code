@@ -36,6 +36,8 @@ import { SliderType } from 'src/app/ui/right-swipe/right-swipe.component';
 export class MainComponent implements OnInit {
   modes: Mode[] = [];
   hormons: Mode[] = [];
+  calendar: Mode[] = [];
+  follicleIcon: Mode[] = [];
   SliderType = SliderType;
   @HostListener('window:scroll', ['$event'])
   onScroll($event: Event) {
@@ -56,6 +58,8 @@ export class MainComponent implements OnInit {
   ) {
     this.modes = contentService.getModes();
     this.hormons = contentService.getHormones();
+    this.calendar = contentService.getCalendar();
+    this.follicleIcon = contentService.getFollicleIcon();
   }
   onClicked() {
     alert('XD');

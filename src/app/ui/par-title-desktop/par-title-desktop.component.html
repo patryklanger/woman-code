@@ -1,15 +1,30 @@
 <div class="container" sxpAnimate>
   <img
-    src="assets/ui/par-title/bg.png"
+    src="assets/desktop/backgrounds/1.png"
     alt=""
     class="bg"
     *ngIf="type == SliderType.modes"
   />
   <img
-    src="assets/ui/par-title/bg2.png"
+    #icon
+    src="assets/desktop/backgrounds/settings.png"
+    alt=""
+    class="icon"
+    *ngIf="type == SliderType.modes"
+  />
+  <img
+    src="assets/desktop/backgrounds/2.png"
     alt=""
     *ngIf="type == SliderType.calendar"
     class="bg"
+  />
+
+  <img
+    #calendarIcon
+    src="assets/desktop/backgrounds/calendar.png"
+    alt=""
+    class="icon"
+    *ngIf="type == SliderType.calendar"
   />
   <img
     src="assets/ui/par-title/bg6.png"

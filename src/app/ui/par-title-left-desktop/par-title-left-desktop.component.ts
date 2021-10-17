@@ -1,12 +1,14 @@
+import { trigger, style, animate, transition } from '@angular/animations';
 import {
-  animateChild,
-  trigger,
-  style,
-  animate,
-  transition,
-  query,
-} from '@angular/animations';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+  HostListener,
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ElementRef,
+  ViewChild,
+} from '@angular/core';
 import { SliderType } from '../right-swipe/right-swipe.component';
 
 @Component({
@@ -41,6 +43,7 @@ export class ParTitleLeftDesktopComponent implements OnInit {
     color?: string;
     textAlign?: string;
   }[] = [];
+  innerWidth = 0;
   SliderType = SliderType;
   @Input() type = SliderType.modes;
   @Input() currentSlide = 0;
@@ -48,6 +51,26 @@ export class ParTitleLeftDesktopComponent implements OnInit {
   textAlign = 'right';
   @Output() nextClicked = new EventEmitter();
   @Output() previousClicked = new EventEmitter();
+  @ViewChild('hormonesIcon') hormonesIcon: ElementRef;
+  @ViewChild('follicleIcon') follicleIcon: ElementRef;
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(e: any) {
+    var halfWidth = this.innerWidth / 2;
+    var xOffset1 = ((e.clientX - halfWidth) / this.innerWidth) * 1000;
+    var xOffset = ((e.clientX - halfWidth) / this.innerWidth) * 60;
+    if (this.type == SliderType.hormons) {
+      this.hormonesIcon.nativeElement.style.transform =
+        'rotate(' + xOffset * -1 + 'deg)';
+    }
+    if (this.type == SliderType.follicleIcon) {
+      this.follicleIcon.nativeElement.style.transform =
+        'rotateY(' + xOffset1 * -1 + 'deg)';
+    }
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(e: any) {
+    this.innerWidth = window.innerWidth;
+  }
   constructor() {
     this.modes.forEach((e) => {
       if (e.color == undefined) e.color = '#B7BDC8';
@@ -60,5 +83,7 @@ export class ParTitleLeftDesktopComponent implements OnInit {
   onPreviousClicked() {
     this.previousClicked.emit();
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
+  }
 }

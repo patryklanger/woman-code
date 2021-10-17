@@ -92,3 +92,18 @@
   cursor: pointer;
   align-self: flex-end;
 }
+.icon {
+  position: absolute;
+  left: 29%;
+  top: 21%;
+  width: 3.33%;
+}
+.follicleContent {
+  top: 36%;
+  max-width: 400px;
+  width: 40%;
+}
+.follicle--icon {
+  width: 4.6%;
+  perspective: 1000px;
+}

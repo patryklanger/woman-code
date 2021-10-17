@@ -130,6 +130,7 @@
   }
   .video {
     display: flex;
+    position: relative;
   }
   .flex--equal--column {
     flex-basis: 100%;
@@ -148,5 +149,30 @@
   .gallery {
     width: 100%;
     height: 150%;
+  }
+  .shadow--video {
+    position: absolute;
+    top: -120%;
+    left: -90%;
+  }
+  .center--on--page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .bigger--h1 {
+    color: #ffd012;
+    text-align: center;
+    font: normal normal 600 #{"min(70px,4.7vw)"} / #{"min(80px,5.55vw)"} Nunito;
+  }
+  .bigger--p {
+    color: #929db1;
+    text-align: center;
+    font: normal normal 600 #{"min(35px,2.43vw)"}/ #{"min(49px,34vw)"} Nunito;
+    margin-top: 28px;
+  }
+  #what--else {
+    margin-top: 164px;
+    margin-bottom: 204px;
   }
 }

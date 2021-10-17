@@ -73,14 +73,14 @@
     width: 3.75%;
   }
   .first_row {
-    animation: moveSlideshow 30s linear infinite;
+    animation: moveSlideshow 60s linear infinite;
   }
   .activeElement::after {
     opacity: 0;
   }
   .second_row {
     transform: rotate(-3deg) translateX(-33.27%);
-    animation: moveSlideshowSec 25s linear infinite;
+    animation: moveSlideshowSec 65s linear infinite;
   }
   .active {
     animation-play-state: paused;
