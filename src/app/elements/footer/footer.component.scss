@@ -49,3 +49,17 @@
 .contact {
   margin-bottom: 36px;
 }
+@media (min-width: 768px) {
+  .footer p {
+    font: normal normal 600 18px/25px Nunito;
+  }
+  .contact a {
+    font: normal normal 600 35px/35px Nunito;
+  }
+  .links a {
+    font: normal normal 600 18px/25px Nunito;
+  }
+  .logo {
+    width: #{"min(29.72vw,428px)"};
+  }
+}

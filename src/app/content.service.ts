@@ -11,6 +11,7 @@ export class ContentService {
         'The most important feature of the application. Thanks to it, you can conceive a child, have a weekend together, have a party with friends, or we can simply connect and have sex. Click on a mode and see how it works.',
       img: 'assets/anim/modes/1.png',
       textAlign: 'right',
+      color: '#FFD012',
     },
 
     {
@@ -48,6 +49,7 @@ export class ContentService {
       content:
         "A feature that will help you understand woman's behavior. Hormones have a huge impact, among others factors on well-being. The 4 most important hormones that are activated on a specific basis and at the right time. Science doesn't lie, check it out!",
       img: 'assets/anim/hormons/1.png',
+      color: '#FFD012',
     },
     {
       title: 'Estrogen',
@@ -82,6 +84,7 @@ export class ContentService {
       content:
         'Thanks to this function, you can see 3 months in advance on what day of the cycle your woman will be. In combination with other functions of the application, you will be able to match the date of your dream vacation or other plans and nothing will spoil you. If the cycle changes, we will let you know.',
       img: 'assets/presentation/calendar.png',
+      color: '#FFD012',
     },
   ];
   follicleIcon = [
@@ -90,6 +93,7 @@ export class ContentService {
       content:
         "Bubble visualization showing the interference of the follicles on the female cycle. For example, under the influence of the luteinizing hormone, the follicle ruptures and it will release the egg, which will be ready for fertilization for 12 hours. Remember, you can't fool nature.",
       img: 'assets/presentation/follicle.png',
+      color: '#FFD012',
     },
   ];
   aboutApp = [

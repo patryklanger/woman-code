@@ -27,7 +27,18 @@
   ></app-screen-gallery>
 
   <!-- desktop -->
-
+  <img
+    src="assets/desktop/1/shadow1.png"
+    [class.shadow--app--modes]="type == SliderType.modes"
+    [ngClass]="{
+      'shadow--app--modes': type == 1,
+      'shadow--follicle': type == 4
+    }"
+    *ngIf="
+      (type == SliderType.modes || type == SliderType.follicleIcon) && desktop
+    "
+    alt=""
+  />
   <app-par-title-desktop
     *ngIf="desktop && (type == 1 || type == 3)"
     [modes]="modes"

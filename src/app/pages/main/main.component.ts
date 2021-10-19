@@ -1,4 +1,10 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  OnInit,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { WindowRefService } from 'src/app/window-ref.service';
 import {
   trigger,
@@ -7,7 +13,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PresentationPageComponent } from '../presentation-page/presentation-page.component';
 import { Mode } from 'src/app/utility/mode';
 import { ContentService } from '../../content.service';
@@ -39,6 +45,15 @@ export class MainComponent implements OnInit {
   calendar: Mode[] = [];
   follicleIcon: Mode[] = [];
   SliderType = SliderType;
+  activeParam = -1;
+  section = '';
+
+  @ViewChild('modesSection') modesSection: ElementRef;
+  @ViewChild('hormonesSection') hormonesSection: ElementRef;
+  @ViewChild('calendarSection') calendarSection: ElementRef;
+  @ViewChild('follicleIconSec') follicleSection: ElementRef;
+  @ViewChild('howItWorksSec') howItWorksSec: ElementRef;
+
   @HostListener('window:scroll', ['$event'])
   onScroll($event: Event) {
     this.opacity =
@@ -54,8 +69,14 @@ export class MainComponent implements OnInit {
   constructor(
     private winRef: WindowRefService,
     private router: Router,
+    private route: ActivatedRoute,
     private contentService: ContentService
   ) {
+    if (!this.route.params) this.activeParam = 1;
+    this.route.params.subscribe((params) => {
+      this.section = params.term;
+    });
+
     this.modes = contentService.getModes();
     this.hormons = contentService.getHormones();
     this.calendar = contentService.getCalendar();
@@ -73,9 +94,70 @@ export class MainComponent implements OnInit {
   onImageClicked() {
     this.router.navigateByUrl('our-app/0');
   }
+  activatedPage(section: string) {
+    console.log(section);
+    let options = {
+      behavior: 'smooth',
+      block: 'start',
+    };
+    switch (section) {
+      case 'modes':
+        this.modesSection.nativeElement.scrollIntoView(options);
+        this.activeParam = 1;
+        break;
+      case 'hormones':
+        this.hormonesSection.nativeElement.scrollIntoView(options);
+        this.activeParam = 2;
+        break;
+      case 'calendar':
+        this.calendarSection.nativeElement.scrollIntoView(options);
+        this.activeParam = 3;
+        break;
+      case 'follicle':
+        this.follicleSection.nativeElement.scrollIntoView(options);
+        this.activeParam = 4;
+        break;
+      case 'how-it-works':
+        this.howItWorksSec.nativeElement.scrollIntoView(options);
+        this.activeParam = 6;
+        break;
+      default:
+        break;
+    }
+  }
 
   ngOnInit(): void {}
   ngAfterViewInit() {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    let options = {
+      behavior: 'smooth',
+      block: 'start',
+    };
+    setTimeout(() => {
+      switch (this.section) {
+        case 'modes':
+          this.modesSection.nativeElement.scrollIntoView(options);
+          this.activeParam = 1;
+          break;
+        case 'hormones':
+          this.hormonesSection.nativeElement.scrollIntoView(options);
+          this.activeParam = 2;
+          break;
+        case 'calendar':
+          this.calendarSection.nativeElement.scrollIntoView(options);
+          this.activeParam = 3;
+          break;
+        case 'follicle':
+          this.follicleSection.nativeElement.scrollIntoView(options);
+          this.activeParam = 4;
+          break;
+        case 'how-it-works':
+          this.howItWorksSec.nativeElement.scrollIntoView(options);
+          this.activeParam = 6;
+          break;
+        default:
+          break;
+      }
+    }, 500);
   }
 }

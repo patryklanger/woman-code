@@ -2,21 +2,29 @@ button {
   border: none;
   background: none;
   padding: #{"min(15px,0.9375vh)"} #{"min(8px,0.5vh)"};
+  cursor: pointer;
 }
 p {
   color: #929db1;
+  cursor: pointer;
 }
 
 button.active {
   border: 2px solid #fff012;
   padding: #{"min(15px,0.9375vh)"} #{"min(8px,0.5vh)"};
   border-radius: #{"min(10px,0.625vh)"};
+  cursor: pointer;
 }
 .active p {
-  color: #ffd012;
+  color: #ffd012 !important;
+  cursor: pointer;
 }
 
 button:focus,
 button:active {
   outline: none;
+  cursor: pointer;
+}
+button:hover p {
+  color: #b28f00;
 }

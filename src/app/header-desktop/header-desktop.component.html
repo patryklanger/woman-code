@@ -1,15 +1,52 @@
 <div class="header">
   <div class="header--content">
-    <img src="assets/desktop/logo.png" alt="" />
-    <!-- <div class="links--container">
-      <app-dektop-menu-button [active]="true">Modes</app-dektop-menu-button>
-      <app-dektop-menu-button>Hormons</app-dektop-menu-button>
-      <app-dektop-menu-button>Calendar</app-dektop-menu-button>
-      <app-dektop-menu-button>Follicle icon</app-dektop-menu-button>
-      <app-dektop-menu-button>About app</app-dektop-menu-button>
-      <app-dektop-menu-button>How it works</app-dektop-menu-button>
-      <app-dektop-menu-button>Medical verification</app-dektop-menu-button>
-      <app-dektop-menu-button>Opinion</app-dektop-menu-button>
-    </div> -->
+    <img
+      src="assets/desktop/logo.png"
+      alt=""
+      class="mainPageLogo"
+      (click)="toMainPage()"
+    />
+    <div class="links--container">
+      <app-dektop-menu-button
+        [active]="activePage == 1"
+        (click)="linkClicked(1)"
+        >Modes</app-dektop-menu-button
+      >
+      <app-dektop-menu-button
+        [active]="activePage == 2"
+        (click)="linkClicked(2)"
+        >Hormons</app-dektop-menu-button
+      >
+      <app-dektop-menu-button
+        [active]="activePage == 3"
+        (click)="linkClicked(3)"
+        >Calendar</app-dektop-menu-button
+      >
+      <app-dektop-menu-button
+        [active]="activePage == 4"
+        (click)="linkClicked(4)"
+        >Follicle icon</app-dektop-menu-button
+      >
+      <app-dektop-menu-button
+        [active]="activePage == 5"
+        (click)="linkClicked(5)"
+        >About app</app-dektop-menu-button
+      >
+      <app-dektop-menu-button
+        [active]="activePage == 6"
+        (click)="linkClicked(6)"
+        >How it works</app-dektop-menu-button
+      >
+      <!-- <app-dektop-menu-button
+        [active]="activePage == 7"
+        (click)="linkClicked(7)"
+        >Medical verification</app-dektop-menu-button
+      > -->
+      <!-- <app-dektop-menu-button
+        [active]="activePage == 8"
+        (click)="linkClicked(8)"
+        >Opinion</app-dektop-menu-button
+      > -->
+    </div>
   </div>
 </div>

@@ -13,7 +13,6 @@
         alt="logo"
         class="woman-logo"
       />
-
       <h2>We Create An Application That Will Help You Understand Your Woman</h2>
       <!-- <button class="blue_btn" (click)="onClicked()">Watch Video</button> -->
       <p class="beta--version--p">This is beta version of this app</p>
@@ -40,20 +39,30 @@
   <app-placeholder></app-placeholder>
 </div> -->
 <div class="desktop--site">
-  <app-header-desktop></app-header-desktop>
-  <div class="dektop--content">
-    <h1 class="main--header">
-      We create an application<br />that will help you understand your woman.
-    </h1>
-    <app-blue-btn class="watch-btn">Watch Video</app-blue-btn>
-    <app-stores class="app-stores"></app-stores>
-    <div class="video content--container">
+  <app-header-desktop
+    (activatedPage)="activatedPage($event)"
+    [activePage]="activeParam"
+    style="z-index: 1000"
+  ></app-header-desktop>
+  <div class="dektop--content" style="z-index: -1">
+    <div style="z-index: 1; display: flex; flex-direction: column">
+      <h1 class="main--header" sxpAnimateDown>
+        We create an application<br />that will help you understand your woman.
+      </h1>
+      <app-yel-border-btn
+        sxpAnimateDown
+        style="align-self: center; margin-top: 73.2px; margin-bottom: 50px"
+        >Tutorial will be available soon</app-yel-border-btn
+      >
+      <app-stores class="app-stores" sxpAnimateDown></app-stores>
+    </div>
+    <div class="video content--container" sxpAnimateDown>
       <img src="assets/desktop/1/shadow.png" class="shadow--video" alt="" />
       <div class="flex--equal--column">
         <app-video></app-video>
       </div>
       <div class="header--container flex--equal--column">
-        <h1 class="flex--equal--column">
+        <h1 class="flex--equal--column" sxpAnimateDown>
           We present something that was not there
         </h1>
       </div>
@@ -63,61 +72,87 @@
       <app-about-app-desktop></app-about-app-desktop>
     </section>
     <div class="modes">
-      <app-right-swipe
-        [modes]="modes"
-        [desktop]="true"
-        [type]="SliderType.modes"
-      ></app-right-swipe>
-      <app-right-swipe
-        class="left-swipe"
-        [modes]="hormons"
-        [desktop]="true"
-        [type]="SliderType.hormons"
-      ></app-right-swipe>
+      <section #modesSection id="modes">
+        <app-right-swipe
+          [modes]="modes"
+          [desktop]="true"
+          [type]="SliderType.modes"
+        ></app-right-swipe>
+      </section>
+      <section #hormonesSection id="hormones">
+        <app-right-swipe
+          class="left-swipe"
+          [modes]="hormons"
+          [desktop]="true"
+          [type]="SliderType.hormons"
+        ></app-right-swipe>
+      </section>
     </div>
     <section id="what--else">
-      <h1 class="bigger--h1">What else?</h1>
-      <p class="bigger--p">
-        Woman Code Wskażę Ci Np.: Że Za 3 Miesięcy Np.<br />21.07.2021 Jego
-        Kobieta Będzie Miała Dni Nie Płodne<br />
-        Lub Miesiączkę.
+      <img
+        src="assets/desktop/1/shadow-what-else.png"
+        class="shadow-what-else"
+        alt=""
+      />
+      <h1 class="bigger--h1" sxpAnimateDown>What else?</h1>
+      <p class="bigger--p" sxpAnimateDown>
+        You will know whether your woman will feel worse.<br />
+        How is this possible? All thanks to the study of the hormonal<br />
+        nature and mathematics. When you select one of the four,<br />
+        you can see the dates 3 months ahead. Useful right? :)
       </p>
     </section>
-    <section id="calendar">
+    <section #calendarSection id="calendar">
       <app-right-swipe
         [modes]="calendar"
         [desktop]="true"
         [type]="SliderType.calendar"
       ></app-right-swipe>
     </section>
-    <section id="follicle">
+    <section #follicleIconSec id="follicle">
       <app-right-swipe
         [modes]="follicleIcon"
         [desktop]="true"
         [type]="SliderType.follicleIcon"
       ></app-right-swipe>
     </section>
-    <h1 style="color: #ffd012; text-align: center; margin-bottom: 15px">
-      How it works
-    </h1>
-    <div style="width: 100%; display: flex; justify-content: center">
-      <p
-        style="
-          margin-bottom: 59px;
-          width: 51%;
-          color: #929db1;
-          text-align: center;
-        "
+    <section #howItWorksSec id="how--it--works--section">
+      <h1
+        style="color: #ffd012; text-align: center; margin-bottom: 15px"
+        sxpAnimateDown
       >
-        Explore our app there! Download app for one of platforms and enjoy it!
-        <br />Additionally you can check out tutorial video below!
-      </p>
-    </div>
+        How it works
+      </h1>
+      <div style="width: 100%; display: flex; justify-content: center">
+        <p
+          class="bigger--p"
+          style="
+            margin-bottom: 59px;
+            width: 51%;
+            color: #929db1;
+            text-align: center;
+          "
+          sxpAnimateDown
+        >
+          Explore our app there! Download app for one of platforms and enjoy it!
+          Additionally you can check out tutorial video below!
+        </p>
+      </div>
 
-    <app-stores style="margin-bottom: 82px"></app-stores>
-    <div style="width: 100%; display: flex; justify-content: center">
-      <app-yel-border-btn>Tutorial will be available soon</app-yel-border-btn>
-    </div>
+      <app-stores style="margin-bottom: 82px" sxpAnimateDown></app-stores>
+      <div
+        style="width: 100%; display: flex; justify-content: center"
+        sxpAnimateDown
+      >
+        <app-yel-border-btn>Tutorial will be available soon</app-yel-border-btn>
+      </div>
+    </section>
+    <h1
+      style="color: #ffd012; text-align: center; margin-top: 200px"
+      sxpAnimateDown
+    >
+      Gallery
+    </h1>
     <div class="gallery" style="margin-bottom: 200px">
       <app-gallery [desktop]="true"></app-gallery>
     </div>

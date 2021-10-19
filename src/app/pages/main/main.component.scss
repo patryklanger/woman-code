@@ -98,10 +98,10 @@
     display: none;
   }
   .desktop--site {
-    background: linear-gradient(180deg, #232526, #232526, #141e30);
+    background: linear-gradient(180deg, #111f38, #0a1c33, #141e30);
     min-height: 100vh;
     width: 100vw;
-
+    padding-top: 200px;
     overflow: hidden;
   }
   .dektop--content {
@@ -154,6 +154,7 @@
     position: absolute;
     top: -120%;
     left: -90%;
+    z-index: -10;
   }
   .center--on--page {
     width: 100%;
@@ -172,7 +173,19 @@
     margin-top: 28px;
   }
   #what--else {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 164px;
     margin-bottom: 204px;
+  }
+  #how--it--works--section {
+    scroll-margin-top: 250px;
+  }
+  .shadow-what-else {
+    position: absolute;
+    justify-self: center;
+    align-self: center;
   }
 }

@@ -36,6 +36,7 @@ import { BlueBtnComponent } from './ui/elements/buttons/blue-btn/blue-btn.compon
 import { ParTitleDesktopComponent } from './ui/par-title-desktop/par-title-desktop.component';
 import { ParTitleLeftDesktopComponent } from './ui/par-title-left-desktop/par-title-left-desktop.component';
 import { AboutAppDesktopComponent } from './about-app-desktop/about-app-desktop.component';
+import { AnimateDownDirective } from './animate-down.directive';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { AboutAppDesktopComponent } from './about-app-desktop/about-app-desktop.
     ParTitleDesktopComponent,
     ParTitleLeftDesktopComponent,
     AboutAppDesktopComponent,
+    AnimateDownDirective,
   ],
   imports: [
     BrowserModule,

@@ -18,9 +18,11 @@ export class AnimateRightDirective {
     | undefined;
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll() {
+    if (!this.initialized) return;
     this.animate();
   }
-
+  animated = false;
+  initialized = false;
   private animating: boolean | undefined;
   private player: AnimationPlayer;
   private defaults: any = {
@@ -33,8 +35,11 @@ export class AnimateRightDirective {
   ) {}
 
   ngOnInit() {
-    this.initialize();
-    this.animate();
+    setTimeout(() => {
+      this.initialize();
+      this.initialized = true;
+      this.animate();
+    }, 500);
   }
 
   private initialize(): void {
@@ -63,10 +68,11 @@ export class AnimateRightDirective {
     const inView = this.isInViewport();
 
     if (!inView) this.animating = false;
-    if (!inView || this.animating) return;
+    if (!inView || this.animating || this.animated) return;
 
     this.player.play();
     this.animating = true;
+    this.animated = this.animating && inView;
   }
 
   private isInViewport(): boolean {
