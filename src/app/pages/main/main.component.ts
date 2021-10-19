@@ -95,7 +95,6 @@ export class MainComponent implements OnInit {
     this.router.navigateByUrl('our-app/0');
   }
   activatedPage(section: string) {
-    console.log(section);
     let options = {
       behavior: 'smooth',
       block: 'start',
