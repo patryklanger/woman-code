@@ -23,5 +23,9 @@
   border-radius: 10px;
 }
 .google_btn {
+  width: #{"min(155px,13.76vw)"};
   cursor: pointer;
+}
+.not--center {
+  width: fit-content;
 }

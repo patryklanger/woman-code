@@ -8,6 +8,7 @@
   border: none;
   outline: none;
   background: #ffd012;
+  cursor: pointer;
 }
 .yellow::before {
   z-index: -1;
@@ -20,6 +21,7 @@
   filter: blur(7px);
   background-color: #ffd012;
   border-radius: 10px;
+  cursor: pointer;
 }
 .yellow p {
   z-index: 20;
@@ -29,4 +31,16 @@
   letter-spacing: 0px;
   color: #1d2229;
   opacity: 1;
+}
+@media (min-width: 768px) {
+  .yellow,
+  .yellow:active,
+  .yellow:focus {
+    border-radius: #{"min(10px,0.69vw)"};
+    padding: #{"min(14.5px,1vw)"} #{"min(16.5px,1.15vw)"};
+  }
+  .yellow p {
+    line-height: #{"min(27px,1.9vw)"};
+    font: normal normal 600 #{"min(20px,1.39vw)"}/#{"min(25px,1.74vw)"} Nunito;
+  }
 }
