@@ -5,11 +5,11 @@
   position: relative;
 }
 .first_row {
-  transform: rotate(-3deg) translate(-10%, -100px);
+  transform: rotate(-3deg) translate(-10%, 0);
   animation: moveSlideshow 20s linear infinite;
 }
 .second_row {
-  transform: rotate(-3deg) translate(-58%, -100px);
+  transform: rotate(-3deg) translate(-58%, 0);
   animation: moveSlideshowSec 30s linear infinite;
 }
 .photo {
@@ -59,12 +59,12 @@
 }
 @keyframes moveSlideshow {
   100% {
-    transform: rotate(-3deg) translateX(-58%, -100px);
+    transform: rotate(-3deg) translateX(-58%, 0);
   }
 }
 @keyframes moveSlideshowSec {
   100% {
-    transform: rotate(-3deg) translateX(-10%, -100px);
+    transform: rotate(-3deg) translateX(-10%, 0);
   }
 }
 @media (min-width: 768px) {
@@ -75,6 +75,7 @@
     width: 3.75%;
   }
   .first_row {
+    transform: rotate(-3deg) translate(-10%, -100px);
     animation: moveSlideshow 60s linear infinite;
   }
   .activeElement::after {

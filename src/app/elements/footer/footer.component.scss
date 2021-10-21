@@ -47,10 +47,19 @@
   color: #ffd012;
   font-size: 16px;
 }
+.logo--desktop {
+  display: none;
+}
 .contact {
   margin-bottom: 36px;
 }
 @media (min-width: 768px) {
+  .logo--desktop {
+    display: unset;
+  }
+  .logo--mobile {
+    display: none;
+  }
   .footer p {
     font: normal normal 600 18px/25px Nunito;
   }

@@ -53,6 +53,7 @@ export class MainComponent implements OnInit {
   @ViewChild('calendarSection') calendarSection: ElementRef;
   @ViewChild('follicleIconSec') follicleSection: ElementRef;
   @ViewChild('howItWorksSec') howItWorksSec: ElementRef;
+  @ViewChild('aboutAppSection') aboutAppSection: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
   onScroll($event: Event) {
@@ -116,6 +117,10 @@ export class MainComponent implements OnInit {
         this.follicleSection.nativeElement.scrollIntoView(options);
         this.activeParam = 4;
         break;
+      case 'aboutApp':
+        this.aboutAppSection.nativeElement.scrollIntoView(options);
+        this.activeParam = 5;
+        break;
       case 'how-it-works':
         this.howItWorksSec.nativeElement.scrollIntoView(options);
         this.activeParam = 6;
@@ -149,6 +154,10 @@ export class MainComponent implements OnInit {
         case 'follicle':
           this.follicleSection.nativeElement.scrollIntoView(options);
           this.activeParam = 4;
+          break;
+        case 'aboutApp':
+          this.aboutAppSection.nativeElement.scrollIntoView(options);
+          this.activeParam = 5;
           break;
         case 'how-it-works':
           this.howItWorksSec.nativeElement.scrollIntoView(options);

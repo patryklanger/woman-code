@@ -40,7 +40,8 @@ export class HeaderDesktopComponent implements OnInit {
         this.activatedPage.emit('follicle');
         break;
       case 5:
-        this.router.navigateByUrl('about-app');
+        this.router.navigateByUrl('main/aboutApp');
+        this.activatedPage.emit('aboutApp');
         this.activePage = 5;
         break;
       case 6:
