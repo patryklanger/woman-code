@@ -5,7 +5,7 @@ import { PresentationPageComponent } from './pages/presentation-page/presentatio
 import { AboutAppComponent } from './pages/about-app/about-app.component';
 
 const routes: Routes = [
-  { path: '', component: MainComponent, pathMatch: 'full' },
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
   { path: 'our-app/:id', component: PresentationPageComponent },
   { path: 'main/:term', component: MainComponent },
   { path: 'main', component: MainComponent },
