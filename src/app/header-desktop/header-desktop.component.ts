@@ -53,7 +53,7 @@ export class HeaderDesktopComponent implements OnInit {
     );
     if (currentOffset >= 100) return;
     var newOffset = currentOffset + 0.2 * offset;
-    if (newOffset > 100 || newOffset > 50) newOffset = 100;
+    if (newOffset > 50) newOffset = 100;
     this.headerElement.nativeElement.style.transform =
       'translateY(-' + newOffset + '%)';
   }
