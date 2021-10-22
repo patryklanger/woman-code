@@ -1,4 +1,13 @@
-import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  EventEmitter,
+  Output,
+  HostListener,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { MatVideoTrackDirective } from 'mat-video/lib/directives/mat-video-track.directive';
 import { Router } from '@angular/router';
 
@@ -13,9 +22,44 @@ export class HeaderDesktopComponent implements OnInit {
   }
   @Input() activePage = 0;
   @Output() activatedPage = new EventEmitter<string>();
+  @ViewChild('header') headerElement: ElementRef;
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll($event: Event) {
+    if (this.oldScroll != undefined) {
+      var scrollingDown = this.oldScroll < window.scrollY;
+      var scrollOffeset = Math.abs(this.oldScroll - window.scrollY);
+
+      if (scrollingDown) this.hideHeader(scrollOffeset);
+      else this.showHeader(scrollOffeset);
+    }
+    this.oldScroll = window.scrollY;
+  }
+  oldScroll: number = 0;
   ngOnInit(): void {}
+  ngAfterViewInit() {
+    this.showHeader(40);
+  }
   toMainPage() {
     this.router.navigateByUrl('main');
+  }
+  hideHeader(offset: number) {
+    if (offset < 30) return;
+    var currentOffset = Math.abs(
+      Number(
+        this.headerElement.nativeElement.style.transform
+          .replace('translateY(', '')
+          .replace('%)', '')
+      )
+    );
+    if (currentOffset >= 100) return;
+    var newOffset = currentOffset + 0.2 * offset;
+    if (newOffset > 100 || newOffset > 50) newOffset = 100;
+    this.headerElement.nativeElement.style.transform =
+      'translateY(-' + newOffset + '%)';
+  }
+  showHeader(offset: number) {
+    if (offset < 30) return;
+    this.headerElement.nativeElement.style.transform = 'translateY(0%)';
   }
   linkClicked(pageNo: number) {
     switch (pageNo) {
