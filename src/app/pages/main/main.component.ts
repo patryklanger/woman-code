@@ -132,7 +132,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {}
   ngAfterViewInit() {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, left: 0 });
     let options = {
       behavior: 'smooth',
       block: 'start',
